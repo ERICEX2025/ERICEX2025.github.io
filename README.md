@@ -1,19 +1,17 @@
 # Eric Ko - Portfolio Website
 
-A personal portfolio website showcasing projects and information about Eric Ko, an aspiring AI Engineer and recent Brown University graduate.
+A personal portfolio website featuring Eric Ko, an aspiring AI Engineer and recent Brown University graduate.
 
 ## Features
 
-- Homepage with project showcase
+- Homepage with personal introduction
 - About page
-- Interactive UI/UX design projects
 - Responsive design with Bootstrap
 
 ## Technologies
 
 - HTML/CSS
-- Bootstrap
-- JavaScript
+- Bootstrap 5.2.3
 
 ## Viewing the Site
 
