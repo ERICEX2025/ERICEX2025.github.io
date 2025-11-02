@@ -1,6 +1,6 @@
 body{
   background-color: #73a580;
- 
+  padding-top: 70px;
 }
 
 .color {
@@ -18,6 +18,9 @@ body{
 }
 .background {
   height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .fade-in-image {
@@ -138,4 +141,51 @@ html {
 
 section {
   scroll-margin-top: 80px; /* adjust this to match your navbar height */
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .background {
+    background-attachment: scroll;
+    height: auto;
+    min-height: 100vh;
+    padding: 60px 0;
+  }
+}
+
+#home h1,
+#home h2 {
+  text-align: center;
+  margin: 0 auto;
+}
+
+#home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  #home h2 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+}
+
+.social-icon {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  text-decoration: none;
+  color: #dff0d8;
 }
