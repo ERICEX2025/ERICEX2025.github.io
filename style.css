@@ -132,3 +132,10 @@ filter: brightness(85%)
   transform: translateY(-5px) scale(1.03);
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
 }
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px; /* adjust this to match your navbar height */
+}
