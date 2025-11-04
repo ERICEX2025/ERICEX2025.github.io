@@ -88,6 +88,7 @@ body {
   object-fit: cover;
   image-rendering: auto;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   transition: opacity 0.4s ease, transform 0.3s ease;
@@ -95,17 +96,13 @@ body {
 
 .card-img-bottom {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
-  height: auto !important; /* Override height to allow full image display */
-  min-height: 250px;
-  max-height: 350px; /* Increased to show more of the image */
-  object-fit: contain !important; /* ✅ show full image - override cover */
+  height: 100% !important; /* Fill entire card */
+  object-fit: contain !important; /* Show full image without zooming/cropping */
   object-position: center;
-  background-color: #000; /* optional: prevents transparent areas showing weird colors */
-  padding: 10px 20px; /* gives logos some breathing room */
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #000; /* Black background fills gaps */
   z-index: 0; /* Ensure image stays behind text overlay */
 }
 
