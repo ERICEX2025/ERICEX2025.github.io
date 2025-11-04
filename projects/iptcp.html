@@ -59,7 +59,7 @@
 
     <section
       class="d-flex flex-column justify-content-center align-items-center background"
-      style="padding-top: 100px; min-height: 100vh"
+      style="padding-top: 200px; min-height: 100vh"
     >
       <div class="container py-5" style="max-width: 900px">
         <div class="text-center mb-5">
@@ -84,77 +84,155 @@
 
         <div class="text-light" style="font-size: 1.1rem; line-height: 1.8">
           <p class="lead mb-5">
-            Built a virtual network stack in Go from scratch, supporting IP
-            forwarding, RIP-based routing, dynamic routing table updates, and an
-            RFC-compliant TCP protocol with state machine, sliding window,
-            retransmission, and congestion control.
+            This project was completed as part of Brown's Computer Networks
+            course in collaboration with Keven Li. Out of respect for the
+            course, we have not posted the source code. Please contact me if you
+            would like more information.
+          </p>
+
+          <p class="mb-5">
+            A significant portion of Computer Networks at Brown is a large,
+            extended project in which students start from scratch and implement
+            IP and then on top of that TCP, ending up with a router program
+            which can route packets to the correct destination over a
+            self-healing network and a host program which can send and receive
+            data reliably.
+          </p>
+
+          <p class="mb-5">
+            The project builds off of a UDP "Layer 2", in which sending data out
+            from a "NIC" results in the segment getting transferred over
+            loopback UDP to the other node, which is just another instance of
+            the program running on the same machine.
           </p>
 
           <div class="mb-5">
-            <h3 class="text-light mb-4" style="border-bottom: 2px solid rgba(255,255,255,0.2); padding-bottom: 10px">
-              <i class="bi bi-diagram-3 me-2"></i>Network Layer
+            <h3
+              class="text-light mb-4"
+              style="
+                border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+                padding-bottom: 10px;
+              "
+            >
+              <i class="bi bi-diagram-3 me-2"></i>Internet Protocol (IP)
             </h3>
+            <p class="mb-4">
+              We implemented IP to support packet forwarding via longest-prefix
+              matching, updating relevant IPv4 header fields correctly (e.g.
+              TTL, checksum), and automatic route discovery / healing using RIP
+              with split horizon and poison reverse. This allows networks using
+              our IP stack to remain usable even when an intermediate node goes
+              down (as long as there are redundant connections).
+            </p>
             <ul class="list-unstyled" style="list-style: none; padding-left: 0">
               <li class="mb-3">
-                <span class="me-2" style="color: #73a580; font-size: 1.3rem">●</span>
-                <strong>IP Forwarding:</strong> Implemented Internet Protocol packet
-                forwarding with proper header parsing, checksum validation, and TTL
-                (Time To Live) handling
+                <span class="me-2" style="color: #73a580; font-size: 1.3rem"
+                  >●</span
+                >
+                <strong>Longest-Prefix Matching:</strong> Implemented packet
+                forwarding using longest-prefix matching to determine optimal
+                routing paths
               </li>
               <li class="mb-3">
-                <span class="me-2" style="color: #73a580; font-size: 1.3rem">●</span>
-                <strong>RIP-based Routing:</strong> Built a dynamic routing protocol
-                using the Routing Information Protocol (RIP), enabling routers to
-                discover and maintain optimal paths through the network
+                <span class="me-2" style="color: #73a580; font-size: 1.3rem"
+                  >●</span
+                >
+                <strong>IPv4 Header Management:</strong> Correctly updated and
+                validated IPv4 header fields including TTL (Time To Live) and
+                checksums
               </li>
               <li class="mb-3">
-                <span class="me-2" style="color: #73a580; font-size: 1.3rem">●</span>
-                <strong>Dynamic Routing Tables:</strong> Implemented automatic routing
-                table updates that adapt to network topology changes, ensuring
-                efficient packet delivery across the network
+                <span class="me-2" style="color: #73a580; font-size: 1.3rem"
+                  >●</span
+                >
+                <strong>RIP with Split Horizon and Poison Reverse:</strong>
+                Built automatic route discovery and network healing
+                capabilities, enabling self-healing networks that adapt to
+                topology changes
               </li>
             </ul>
           </div>
 
           <div class="mb-5">
-            <h3 class="text-light mb-4" style="border-bottom: 2px solid rgba(255,255,255,0.2); padding-bottom: 10px">
-              <i class="bi bi-shuffle me-2"></i>Transport Layer
+            <h3
+              class="text-light mb-4"
+              style="
+                border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+                padding-bottom: 10px;
+              "
+            >
+              <i class="bi bi-shuffle me-2"></i>Transmission Control Protocol
+              (TCP)
             </h3>
+            <p class="mb-4">
+              We implemented TCP by directly referencing RFC 9293. We built
+              support for TCP handshake, teardown, retransmissions over lossy
+              connections, handling out-of-order segments, and zero-window
+              probing.
+            </p>
             <ul class="list-unstyled" style="list-style: none; padding-left: 0">
               <li class="mb-3">
-                <span class="me-2" style="color: #73a580; font-size: 1.3rem">●</span>
-                <strong>TCP State Machine:</strong> Implemented the complete TCP
-                connection lifecycle, including connection establishment (three-way
-                handshake), data transfer, and connection termination
+                <span class="me-2" style="color: #73a580; font-size: 1.3rem"
+                  >●</span
+                >
+                <strong>TCP Handshake & Teardown:</strong> Implemented the
+                complete TCP connection lifecycle including three-way handshake
+                for connection establishment and proper connection termination
               </li>
               <li class="mb-3">
-                <span class="me-2" style="color: #73a580; font-size: 1.3rem">●</span>
-                <strong>Sliding Window Protocol:</strong> Built flow control mechanisms
-                using sliding windows to manage data transmission and ensure reliable
-                delivery
+                <span class="me-2" style="color: #73a580; font-size: 1.3rem"
+                  >●</span
+                >
+                <strong>Retransmissions:</strong> Built reliable data transfer
+                with automatic retransmission mechanisms to handle packet loss
+                over lossy connections
               </li>
               <li class="mb-3">
-                <span class="me-2" style="color: #73a580; font-size: 1.3rem">●</span>
-                <strong>Retransmission:</strong> Implemented automatic packet
-                retransmission with exponential backoff to handle network packet loss
+                <span class="me-2" style="color: #73a580; font-size: 1.3rem"
+                  >●</span
+                >
+                <strong>Out-of-Order Segment Handling:</strong> Implemented
+                proper sequencing and reassembly of TCP segments that arrive out
+                of order
               </li>
               <li class="mb-3">
-                <span class="me-2" style="color: #73a580; font-size: 1.3rem">●</span>
-                <strong>Congestion Control:</strong> Developed congestion control
-                algorithms (including slow start and congestion avoidance) to adapt
-                transmission rates based on network conditions
-              </li>
-              <li class="mb-3">
-                <span class="me-2" style="color: #73a580; font-size: 1.3rem">●</span>
-                <strong>Socket API & Testing REPL:</strong> Developed a socket API and
-                testing REPL to establish, manage, and verify reliable data transfer
-                across lossy virtual networks
+                <span class="me-2" style="color: #73a580; font-size: 1.3rem"
+                  >●</span
+                >
+                <strong>Zero-Window Probing:</strong> Developed flow control
+                mechanisms including zero-window probing to handle receiver
+                buffer constraints
               </li>
             </ul>
           </div>
 
           <div class="mb-5">
-            <h3 class="text-light mb-4" style="border-bottom: 2px solid rgba(255,255,255,0.2); padding-bottom: 10px">
+            <h3
+              class="text-light mb-4"
+              style="
+                border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+                padding-bottom: 10px;
+              "
+            >
+              <i class="bi bi-tools me-2"></i>Development & Debugging
+            </h3>
+            <p class="mb-4">
+              Throughout implementing both IP and TCP, we used Wireshark as a
+              primary debugging tool, to ensure checksums were correct, headers
+              were well-formatted, retransmissions were behaving correctly, and
+              ACK numbers were updating as expected especially in the case of
+              dropped packets.
+            </p>
+          </div>
+
+          <div class="mb-5">
+            <h3
+              class="text-light mb-4"
+              style="
+                border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+                padding-bottom: 10px;
+              "
+            >
               <i class="bi bi-code-slash me-2"></i>Technologies
             </h3>
             <div class="d-flex flex-wrap gap-2">
@@ -162,6 +240,8 @@
               <span class="badge bg-light text-dark px-3 py-2">Networking</span>
               <span class="badge bg-light text-dark px-3 py-2">TCP/IP</span>
               <span class="badge bg-light text-dark px-3 py-2">RFC 9293</span>
+              <span class="badge bg-light text-dark px-3 py-2">RIP</span>
+              <span class="badge bg-light text-dark px-3 py-2">Wireshark</span>
             </div>
           </div>
 
