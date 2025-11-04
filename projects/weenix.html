@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/png" href="../images/turtle!.png" />
+    <title>Weenix Operating System - Eric Ko</title>
+  </head>
+
+  <body>
+    <!-- NAVBAR-->
+    <nav
+      class="navbar fixed-top navbar-custom navbar-expand-lg navbar-dark shadow-sm"
+    >
+      <div class="container">
+        <a href="../index.html" class="navbar-brand">
+          <span class="font-weight-bold">Eric Ko</span>
+        </a>
+
+        <button
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          id="navbarSupportedContent"
+          class="collapse navbar-collapse justify-content-end"
+        >
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#experience">Experience</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section
+      class="d-flex flex-column justify-content-center align-items-center background"
+      style="padding-top: 100px; min-height: 100vh"
+    >
+      <div class="container py-5" style="max-width: 900px">
+        <div class="text-center mb-5">
+          <a
+            href="../index.html#experience"
+            class="text-light mb-5 d-inline-block"
+            style="text-decoration: none; font-size: 1.2rem"
+          >
+            <i class="bi bi-arrow-left"></i> Back to Experience
+          </a>
+          <img
+            src="../images/weenix.png"
+            alt="Weenix Operating System"
+            class="mb-4"
+            style="max-width: 300px; height: auto; object-position: 70% center"
+          />
+          <h1 class="text-light mb-2">Weenix Operating System</h1>
+          <p class="text-light mb-4" style="opacity: 0.8; font-size: 1.1rem">
+            Jan 2025 – May 2025
+          </p>
+        </div>
+
+        <div class="text-light" style="font-size: 1.1rem; line-height: 1.8">
+          <p class="lead mb-5">
+            Developed major components of a Unix-like operating system kernel
+            ("Weenix"), writing <strong>9,000+ lines of C</strong> implementing
+            threads, processes, device drivers, the virtual file system interface,
+            and the underlying file system.
+          </p>
+
+          <div class="mb-5">
+            <h3 class="text-light mb-4" style="border-bottom: 2px solid rgba(255,255,255,0.2); padding-bottom: 10px">
+              <i class="bi bi-gear me-2"></i>Core Components
+            </h3>
+            <ul class="list-unstyled" style="list-style: none; padding-left: 0">
+              <li class="mb-3">
+                <span class="me-2" style="color: #73a580; font-size: 1.3rem">●</span>
+                <strong>Threads & Processes:</strong> Implemented process creation,
+                scheduling, and termination with context switching and proper resource
+                cleanup
+              </li>
+              <li class="mb-3">
+                <span class="me-2" style="color: #73a580; font-size: 1.3rem">●</span>
+                <strong>Synchronization Primitives:</strong> Developed mutexes, condition
+                variables, and semaphores to ensure safe context switching and reliable
+                concurrency within the kernel
+              </li>
+              <li class="mb-3">
+                <span class="me-2" style="color: #73a580; font-size: 1.3rem">●</span>
+                <strong>Device Drivers:</strong> Implemented drivers for keyboard,
+                console, and timer devices, handling hardware interrupts and providing
+                clean interfaces for system interaction
+              </li>
+              <li class="mb-3">
+                <span class="me-2" style="color: #73a580; font-size: 1.3rem">●</span>
+                <strong>File Systems:</strong> Built a hierarchical file system with
+                directory support, file operations (create, read, write, delete), and
+                proper inode management
+              </li>
+              <li class="mb-3">
+                <span class="me-2" style="color: #73a580; font-size: 1.3rem">●</span>
+                <strong>Virtual Memory:</strong> Implemented user address space
+                management, paging, virtual address translation, and memory management
+                with proper handling of page faults
+              </li>
+              <li class="mb-3">
+                <span class="me-2" style="color: #73a580; font-size: 1.3rem">●</span>
+                <strong>System Calls:</strong> Created a comprehensive system call
+                interface allowing user programs to interact with kernel functionality
+                safely
+              </li>
+            </ul>
+          </div>
+
+          <div class="mb-5">
+            <h3 class="text-light mb-4" style="border-bottom: 2px solid rgba(255,255,255,0.2); padding-bottom: 10px">
+              <i class="bi bi-code-slash me-2"></i>Technologies
+            </h3>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge bg-light text-dark px-3 py-2">C</span>
+              <span class="badge bg-light text-dark px-3 py-2">Operating Systems</span>
+              <span class="badge bg-light text-dark px-3 py-2">Systems Programming</span>
+              <span class="badge bg-light text-dark px-3 py-2">Kernel Development</span>
+            </div>
+          </div>
+
+          <div class="text-center mt-5 mb-5">
+            <a
+              href="https://github.com/brown-cs1690/handout/wiki/Weenix-Operating-System"
+              target="_blank"
+              class="btn btn-outline-light btn-lg"
+            >
+              Learn More About Weenix
+              <i class="bi bi-box-arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-custom text-center text-light py-3">
+      <p class="mb-0">© 2025 Eric Ko. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
