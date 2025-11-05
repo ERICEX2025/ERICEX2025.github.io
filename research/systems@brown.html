@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/png" href="../images/turtle!.png" />
+    <title>Systems@Brown - Eric Ko</title>
+    <style>
+      @media (max-width: 768px) {
+        .technologies-container {
+          flex-direction: column !important;
+          align-items: center !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR-->
+    <nav
+      class="navbar fixed-top navbar-custom navbar-expand-lg navbar-dark shadow-sm"
+      role="navigation"
+    >
+      <div class="container">
+        <a href="../index.html" class="navbar-brand">
+          <span class="font-weight-bold">Eric Ko</span>
+        </a>
+
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          id="navbarSupportedContent"
+          class="collapse navbar-collapse justify-content-end"
+        >
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#experience">Experience</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section
+      id="systems-brown"
+      class="d-flex flex-column align-items-center background"
+      style="
+        padding-bottom: 60px;
+        min-height: auto;
+        height: auto;
+        padding-top: 0;
+      "
+    >
+      <div class="container" style="max-width: 1000px; padding-top: 40px">
+        <!-- Header Section -->
+        <div class="text-center">
+          <h1
+            class="text-light mb-3 mt-5"
+            style="font-size: 2.5rem; font-weight: 600; letter-spacing: -0.5px"
+          >
+            Systems@Brown
+          </h1>
+          <div
+            class="d-flex align-items-center justify-content-center gap-3 mb-4"
+            role="group"
+            aria-label="Project date and role"
+          >
+            <span
+              class="badge"
+              style="
+                background: rgba(255, 255, 255, 0.2);
+                color: white;
+                padding: 8px 16px;
+                font-size: 0.9rem;
+                font-weight: 400;
+              "
+            >
+              <i class="bi bi-calendar3 me-2" aria-hidden="true"></i>May 2023 –
+              Aug 2023
+            </span>
+            <span
+              class="badge"
+              style="
+                background: rgba(255, 255, 255, 0.2);
+                color: white;
+                padding: 8px 16px;
+                font-size: 0.9rem;
+                font-weight: 400;
+              "
+            >
+              <i class="bi bi-mortarboard me-2" aria-hidden="true"></i
+              >Undergraduate Research Assistant
+            </span>
+          </div>
+        </div>
+
+        <!-- Introduction Card -->
+        <div
+          class="card"
+          style="
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+          "
+        >
+          <div class="card-body p-4 d-flex flex-column align-items-center">
+            <img
+              src="../images/systems@brown.png"
+              alt="Systems@Brown logo"
+              title="Systems@Brown"
+              loading="lazy"
+              style="
+                max-width: 300px;
+                width: 100%;
+                height: auto;
+                margin-bottom: 20px;
+              "
+            />
+            <p
+              class="text-light mb-0"
+              style="font-size: 1.15rem; line-height: 1.8; text-align: center"
+            >
+              Designed cryptographic protocols to preserve user privacy and
+              accountability in the $245B online advertising market. As an
+              undergraduate research assistant, I worked on implementing and
+              validating privacy-preserving advertising systems using advanced
+              cryptographic techniques.
+            </p>
+          </div>
+        </div>
+
+        <!-- Research Contributions Section -->
+        <div class="mb-5 mt-5">
+          <div class="row g-4">
+            <!-- Validation Prototype Card -->
+            <div class="col-12">
+              <div
+                class="card h-100"
+                style="
+                  background: rgba(255, 255, 255, 0.06);
+                  border: 1px solid rgba(255, 255, 255, 0.12);
+                  border-radius: 10px;
+                  transition: transform 0.3s, box-shadow 0.3s;
+                "
+                onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)';"
+                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';"
+              >
+                <div class="card-body p-4">
+                  <div class="d-flex align-items-start mb-3">
+                    <div
+                      style="
+                        width: 40px;
+                        height: 40px;
+                        background: rgba(115, 165, 128, 0.2);
+                        border-radius: 8px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 15px;
+                        flex-shrink: 0;
+                      "
+                    >
+                      <i
+                        class="bi bi-shield-lock"
+                        style="font-size: 1.2rem; color: #73a580"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                    <div>
+                      <h4
+                        class="text-light mb-2"
+                        style="font-size: 1.2rem; font-weight: 600"
+                      >
+                        Validation Prototype
+                      </h4>
+                      <p
+                        class="text-light mb-0"
+                        style="
+                          opacity: 0.9;
+                          line-height: 1.6;
+                          font-size: 0.95rem;
+                        "
+                      >
+                        Implemented a Python-based validation prototype
+                        simulating interactions between advertisers, publishers,
+                        platforms, and users. The system ensured user privacy
+                        using anonymous credentials, zero-knowledge proofs, and
+                        blind signatures, providing a foundation for
+                        privacy-preserving advertising systems.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Protocol Implementation Card -->
+            <div class="col-12">
+              <div
+                class="card h-100"
+                style="
+                  background: rgba(255, 255, 255, 0.06);
+                  border: 1px solid rgba(255, 255, 255, 0.12);
+                  border-radius: 10px;
+                  transition: transform 0.3s, box-shadow 0.3s;
+                "
+                onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)';"
+                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';"
+              >
+                <div class="card-body p-4">
+                  <div class="d-flex align-items-start mb-3">
+                    <div
+                      style="
+                        width: 40px;
+                        height: 40px;
+                        background: rgba(115, 165, 128, 0.2);
+                        border-radius: 8px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 15px;
+                        flex-shrink: 0;
+                      "
+                    >
+                      <i
+                        class="bi bi-diagram-3"
+                        style="font-size: 1.2rem; color: #73a580"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                    <div>
+                      <h4
+                        class="text-light mb-2"
+                        style="font-size: 1.2rem; font-weight: 600"
+                      >
+                        Protocol Implementation
+                      </h4>
+                      <p
+                        class="text-light mb-0"
+                        style="
+                          opacity: 0.9;
+                          line-height: 1.6;
+                          font-size: 0.95rem;
+                        "
+                      >
+                        Reproduced and extended protocols from our group's
+                        privacy-preserving ads paper. Leveraged the
+                        anonymous-credentials-lite library to implement
+                        credential issuance and verification, as well as
+                        blind-signature flows across users, platforms, and
+                        publishers.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Learning & Development Card -->
+            <div class="col-12">
+              <div
+                class="card h-100"
+                style="
+                  background: rgba(255, 255, 255, 0.06);
+                  border: 1px solid rgba(255, 255, 255, 0.12);
+                  border-radius: 10px;
+                  transition: transform 0.3s, box-shadow 0.3s;
+                "
+                onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)';"
+                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';"
+              >
+                <div class="card-body p-4">
+                  <div class="d-flex align-items-start mb-3">
+                    <div
+                      style="
+                        width: 40px;
+                        height: 40px;
+                        background: rgba(115, 165, 128, 0.2);
+                        border-radius: 8px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 15px;
+                        flex-shrink: 0;
+                      "
+                    >
+                      <i
+                        class="bi bi-lightbulb"
+                        style="font-size: 1.2rem; color: #73a580"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                    <div>
+                      <h4
+                        class="text-light mb-2"
+                        style="font-size: 1.2rem; font-weight: 600"
+                      >
+                        Learning & Development
+                      </h4>
+                      <p
+                        class="text-light mb-0"
+                        style="
+                          opacity: 0.9;
+                          line-height: 1.6;
+                          font-size: 0.95rem;
+                        "
+                      >
+                        Ramped from no prior cryptography background to a
+                        working Python prototype with zero-knowledge proofs.
+                        This involved deep learning of cryptographic concepts
+                        including anonymous credentials, zero-knowledge proofs,
+                        and blind signatures, demonstrating the ability to
+                        quickly master complex technical domains.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Performance Evaluation Card -->
+            <div class="col-12">
+              <div
+                class="card h-100"
+                style="
+                  background: rgba(255, 255, 255, 0.06);
+                  border: 1px solid rgba(255, 255, 255, 0.12);
+                  border-radius: 10px;
+                  transition: transform 0.3s, box-shadow 0.3s;
+                "
+                onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)';"
+                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';"
+              >
+                <div class="card-body p-4">
+                  <div class="d-flex align-items-start mb-3">
+                    <div
+                      style="
+                        width: 40px;
+                        height: 40px;
+                        background: rgba(115, 165, 128, 0.2);
+                        border-radius: 8px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 15px;
+                        flex-shrink: 0;
+                      "
+                    >
+                      <i
+                        class="bi bi-speedometer2"
+                        style="font-size: 1.2rem; color: #73a580"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                    <div>
+                      <h4
+                        class="text-light mb-2"
+                        style="font-size: 1.2rem; font-weight: 600"
+                      >
+                        Performance Evaluation
+                      </h4>
+                      <p
+                        class="text-light mb-0"
+                        style="
+                          opacity: 0.9;
+                          line-height: 1.6;
+                          font-size: 0.95rem;
+                        "
+                      >
+                        Ran microbenchmarks to evaluate latency and overhead for
+                        each party under realistic workloads and adversaries.
+                        This performance analysis helped validate the practical
+                        feasibility of the cryptographic protocols and informed
+                        design decisions for the privacy-preserving advertising
+                        system.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reflection / Summary Section -->
+        <div class="mt-5">
+          <div
+            class="card"
+            style="
+              background: rgba(255, 255, 255, 0.08);
+              border: 1px solid rgba(255, 255, 255, 0.15);
+              border-radius: 12px;
+              backdrop-filter: blur(10px);
+            "
+          >
+            <div class="card-body p-4">
+              <h2
+                class="text-light mb-2 text-center"
+                style="font-size: 1.5rem; font-weight: 600"
+              >
+                Reflection
+              </h2>
+              <p
+                class="text-light mb-4 text-center"
+                style="font-size: 1.1rem; line-height: 1.8"
+              >
+                Working at Systems@Brown was a transformative experience that
+                introduced me to the world of cryptographic research. Starting
+                with no prior background in cryptography, I learned to implement
+                complex protocols involving zero-knowledge proofs, anonymous
+                credentials, and blind signatures. The opportunity to work with
+                Professors Malte Schwarzkopf and Anna Lysyanskaya gave me
+                invaluable insights into how research is conducted at the
+                intersection of systems and cryptography. This experience
+                deepened my appreciation for the importance of privacy in modern
+                systems and the sophisticated techniques required to achieve it.
+              </p>
+              <div class="text-center">
+                <p
+                  class="text-light mb-0"
+                  style="opacity: 0.8; font-size: 0.95rem"
+                >
+                  <i class="bi bi-people me-2" aria-hidden="true"></i>Advised by
+                  <strong>Professor Malte Schwarzkopf</strong> and
+                  <strong>Professor Anna Lysyanskaya</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technologies Section -->
+        <div class="mt-4 mb-3">
+          <div
+            class="d-flex flex-wrap gap-3 justify-content-center technologies-container"
+          >
+            <span
+              class="badge px-4 py-2"
+              style="
+                background: rgba(255, 255, 255, 0.15);
+                color: white;
+                font-size: 1rem;
+                font-weight: 500;
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+              "
+            >
+              <i class="bi bi-filetype-py" aria-hidden="true"></i>Python
+            </span>
+            <span
+              class="badge px-4 py-2"
+              style="
+                background: rgba(255, 255, 255, 0.15);
+                color: white;
+                font-size: 1rem;
+                font-weight: 500;
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+              "
+            >
+              <i class="bi bi-shield-lock me-2" aria-hidden="true"></i
+              >Cryptography
+            </span>
+            <span
+              class="badge px-4 py-2"
+              style="
+                background: rgba(255, 255, 255, 0.15);
+                color: white;
+                font-size: 1rem;
+                font-weight: 500;
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+              "
+            >
+              <i class="bi bi-key me-2" aria-hidden="true"></i>Zero-Knowledge
+              Proofs
+            </span>
+            <span
+              class="badge px-4 py-2"
+              style="
+                background: rgba(255, 255, 255, 0.15);
+                color: white;
+                font-size: 1rem;
+                font-weight: 500;
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+              "
+            >
+              <i class="bi bi-file-lock me-2" aria-hidden="true"></i>Anonymous
+              Credentials
+            </span>
+            <span
+              class="badge px-4 py-2"
+              style="
+                background: rgba(255, 255, 255, 0.15);
+                color: white;
+                font-size: 1rem;
+                font-weight: 500;
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+              "
+            >
+              <i class="bi bi-shield-check me-2" aria-hidden="true"></i>Blind
+              Signatures
+            </span>
+            <span
+              class="badge px-4 py-2"
+              style="
+                background: rgba(255, 255, 255, 0.15);
+                color: white;
+                font-size: 1rem;
+                font-weight: 500;
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+              "
+            >
+              <i class="bi bi-graph-up me-2" aria-hidden="true"></i>Research
+            </span>
+          </div>
+        </div>
+
+        <!-- Visit Systems@Brown Button -->
+        <div class="text-center mb-3">
+          <a
+            href="https://systems.cs.brown.edu"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="badge px-5 py-3"
+            style="
+              background: rgba(115, 165, 128, 0.3);
+              border: 2px solid #73a580;
+              color: white;
+              font-size: 1.1rem;
+              font-weight: 500;
+              border-radius: 8px;
+              transition: all 0.3s;
+              text-decoration: none;
+              display: inline-flex;
+              align-items: center;
+              gap: 10px;
+              cursor: pointer;
+            "
+            onmouseover="this.style.background='rgba(115, 165, 128, 0.5)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(115, 165, 128, 0.3)';"
+            onmouseout="this.style.background='rgba(115, 165, 128, 0.3)'; this.style.transform='translateY(0)'; this.style.boxShadow='none';"
+            aria-label="Learn More About Systems@Brown"
+          >
+            Learn More About Systems@Brown
+            <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <!-- Back to Top Arrow -->
+        <div class="text-center back-to-top-arrow">
+          <a
+            href="#systems-brown"
+            class="text-light bounce-arrow"
+            style="font-size: 2rem; text-decoration: none"
+            >↑</a
+          >
+        </div>
+      </div>
+    </section>
+    <footer
+      class="footer-custom text-center text-light py-3"
+      style="width: 100%; margin-top: 0"
+    >
+      <p class="mb-0">© 2025 Eric Ko. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
