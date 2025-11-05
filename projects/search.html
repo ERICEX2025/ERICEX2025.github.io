@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/png" href="../images/turtle!.png" />
+    <title>Search - Eric Ko</title>
+    <style>
+      @media (max-width: 768px) {
+        .technologies-container {
+          flex-direction: column !important;
+          align-items: center !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR-->
+    <nav
+      class="navbar fixed-top navbar-custom navbar-expand-lg navbar-dark shadow-sm"
+      role="navigation"
+    >
+      <div class="container">
+        <a href="../index.html" class="navbar-brand">
+          <span class="font-weight-bold">Eric Ko</span>
+        </a>
+
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          id="navbarSupportedContent"
+          class="collapse navbar-collapse justify-content-end"
+        >
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#experience">Experience</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section
+      id="search"
+      class="d-flex flex-column align-items-center background"
+      style="
+        padding-bottom: 60px;
+        min-height: auto;
+        height: auto;
+        padding-top: 0;
+      "
+    >
+      <div class="container" style="max-width: 1000px; padding-top: 40px">
+        <!-- Header Section -->
+        <div class="text-center">
+          <h1
+            class="text-light mb-3 mt-5"
+            style="font-size: 2.5rem; font-weight: 600; letter-spacing: -0.5px"
+          >
+            Search
+          </h1>
+          <div
+            class="d-flex align-items-center justify-content-center gap-3 mb-4"
+            role="group"
+            aria-label="Project date and course"
+          >
+            <span
+              class="badge"
+              style="
+                background: rgba(255, 255, 255, 0.2);
+                color: white;
+                padding: 8px 16px;
+                font-size: 0.9rem;
+                font-weight: 400;
+              "
+            >
+              <i class="bi bi-calendar3 me-2" aria-hidden="true"></i>Apr 2022 –
+              May 2022
+            </span>
+            <span
+              class="badge"
+              style="
+                background: rgba(255, 255, 255, 0.2);
+                color: white;
+                padding: 8px 16px;
+                font-size: 0.9rem;
+                font-weight: 400;
+              "
+            >
+              <i class="bi bi-mortarboard me-2" aria-hidden="true"></i>Brown
+              CSCI0200
+            </span>
+          </div>
+        </div>
+
+        <!-- Introduction Card -->
+        <div
+          class="card"
+          style="
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+          "
+        >
+          <div class="card-body p-4 d-flex flex-column align-items-center mb-">
+            <p
+              class="text-light mb-0"
+              style="font-size: 1.15rem; line-height: 1.8; text-align: center"
+            >
+              As part of Brown University's Data Structures and Algorithms
+              course (CSCI0200), I developed a search engine that processes a
+              corpus of documents to efficiently handle user queries. The
+              project involved building an indexer to preprocess documents and
+              create efficient data structures, a querier to handle user queries
+              using the preprocessed data, and implementing the PageRank
+              algorithm to enhance search result relevance. The system processes
+              XML-formatted documents and supports complex query operations with
+              optimized time and space complexity.
+            </p>
+          </div>
+        </div>
+
+        <!-- Core Components Section -->
+        <div class="mb-5 mt-5">
+          <div class="row g-4">
+            <!-- Indexer Card -->
+            <div class="col-12">
+              <div
+                class="card h-100"
+                style="
+                  background: rgba(255, 255, 255, 0.06);
+                  border: 1px solid rgba(255, 255, 255, 0.12);
+                  border-radius: 10px;
+                  transition: transform 0.3s, box-shadow 0.3s;
+                "
+                onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)';"
+                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';"
+              >
+                <div class="card-body p-4">
+                  <div class="d-flex align-items-start mb-3">
+                    <div
+                      style="
+                        width: 40px;
+                        height: 40px;
+                        background: rgba(115, 165, 128, 0.2);
+                        border-radius: 8px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 15px;
+                        flex-shrink: 0;
+                      "
+                    >
+                      <i
+                        class="bi bi-database"
+                        style="font-size: 1.2rem; color: #73a580"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                    <div>
+                      <h4
+                        class="text-light mb-2"
+                        style="font-size: 1.2rem; font-weight: 600"
+                      >
+                        Indexer
+                      </h4>
+                      <p
+                        class="text-light mb-0"
+                        style="
+                          opacity: 0.9;
+                          line-height: 1.6;
+                          font-size: 0.95rem;
+                        "
+                      >
+                        Implemented an indexer that processes a corpus of XML
+                        documents to build efficient data structures for
+                        querying. The indexer parses XML files, extracts
+                        document content and metadata, tokenizes text, and
+                        creates an inverted index mapping terms to documents. I
+                        designed the data structures to optimize both time and
+                        space complexity, using hash maps and other appropriate
+                        collections to enable fast lookups during query
+                        processing. The indexer handles edge cases in XML
+                        parsing and text processing.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Querier Card -->
+            <div class="col-12">
+              <div
+                class="card h-100"
+                style="
+                  background: rgba(255, 255, 255, 0.06);
+                  border: 1px solid rgba(255, 255, 255, 0.12);
+                  border-radius: 10px;
+                  transition: transform 0.3s, box-shadow 0.3s;
+                "
+                onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)';"
+                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';"
+              >
+                <div class="card-body p-4">
+                  <div class="d-flex align-items-start mb-3">
+                    <div
+                      style="
+                        width: 40px;
+                        height: 40px;
+                        background: rgba(115, 165, 128, 0.2);
+                        border-radius: 8px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 15px;
+                        flex-shrink: 0;
+                      "
+                    >
+                      <i
+                        class="bi bi-search"
+                        style="font-size: 1.2rem; color: #73a580"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                    <div>
+                      <h4
+                        class="text-light mb-2"
+                        style="font-size: 1.2rem; font-weight: 600"
+                      >
+                        Querier
+                      </h4>
+                      <p
+                        class="text-light mb-0"
+                        style="
+                          opacity: 0.9;
+                          line-height: 1.6;
+                          font-size: 0.95rem;
+                        "
+                      >
+                        Built a querier that processes user queries using the
+                        preprocessed index. The querier handles various query
+                        types, including single-term queries, multi-term
+                        queries, and complex boolean operations. I implemented
+                        efficient query processing algorithms that leverage the
+                        inverted index to quickly find relevant documents. The
+                        querier combines term-frequency and inverse document
+                        frequency (TF-IDF) scoring with PageRank to rank search
+                        results by relevance. The system returns results in
+                        order of relevance, with proper handling of edge cases
+                        and query parsing.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PageRank Card -->
+            <div class="col-12">
+              <div
+                class="card h-100"
+                style="
+                  background: rgba(255, 255, 255, 0.06);
+                  border: 1px solid rgba(255, 255, 255, 0.12);
+                  border-radius: 10px;
+                  transition: transform 0.3s, box-shadow 0.3s;
+                "
+                onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)';"
+                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';"
+              >
+                <div class="card-body p-4">
+                  <div class="d-flex align-items-start mb-3">
+                    <div
+                      style="
+                        width: 40px;
+                        height: 40px;
+                        background: rgba(115, 165, 128, 0.2);
+                        border-radius: 8px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 15px;
+                        flex-shrink: 0;
+                      "
+                    >
+                      <i
+                        class="bi bi-diagram-3-fill"
+                        style="font-size: 1.2rem; color: #73a580"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                    <div>
+                      <h4
+                        class="text-light mb-2"
+                        style="font-size: 1.2rem; font-weight: 600"
+                      >
+                        PageRank Algorithm
+                      </h4>
+                      <p
+                        class="text-light mb-0"
+                        style="
+                          opacity: 0.9;
+                          line-height: 1.6;
+                          font-size: 0.95rem;
+                        "
+                      >
+                        Implemented the PageRank algorithm to compute document
+                        importance based on link structure. The algorithm models
+                        documents as nodes in a graph where links between
+                        documents represent edges. I implemented iterative
+                        PageRank computation using power iteration, handling
+                        dangling nodes and convergence criteria. The PageRank
+                        scores are combined with TF-IDF scores to create a
+                        composite relevance ranking that considers both content
+                        relevance and document importance. The implementation
+                        efficiently processes large document collections and
+                        handles edge cases in graph structure.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reflection / Summary Section -->
+        <div class="mt-5">
+          <div
+            class="card"
+            style="
+              background: rgba(255, 255, 255, 0.08);
+              border: 1px solid rgba(255, 255, 255, 0.15);
+              border-radius: 12px;
+              backdrop-filter: blur(10px);
+            "
+          >
+            <div class="card-body p-4">
+              <h2
+                class="text-light mb-2 text-center"
+                style="font-size: 1.5rem; font-weight: 600"
+              >
+                Reflection
+              </h2>
+              <p
+                class="text-light mb-4 text-center"
+                style="font-size: 1.1rem; line-height: 1.8"
+              >
+                The Search project was a comprehensive introduction to
+                information retrieval and search engine architecture. Building
+                the indexer taught me the importance of choosing appropriate
+                data structures for specific problem constraints—hash maps for
+                fast lookups, efficient text processing, and careful
+                consideration of space-time trade-offs. Implementing the querier
+                gave me hands-on experience with ranking algorithms and query
+                processing, reinforcing the importance of algorithmic efficiency
+                in real-world applications.
+                <br />
+                <br />
+                Implementing PageRank was particularly rewarding, as it
+                demonstrated how graph algorithms can be applied to solve
+                practical problems. The iterative nature of PageRank computation
+                and the need to handle edge cases like dangling nodes taught me
+                to think carefully about algorithm correctness and convergence.
+                Combining multiple ranking signals (TF-IDF and PageRank) showed
+                me how real search engines balance different relevance factors.
+                This project deepened my understanding of data structures,
+                algorithms, and their practical applications in information
+                retrieval systems.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technologies Section -->
+        <div class="mt-4 mb-3">
+          <div
+            class="d-flex flex-wrap gap-3 justify-content-center technologies-container"
+          >
+            <span
+              class="badge px-4 py-2"
+              style="
+                background: rgba(255, 255, 255, 0.15);
+                color: white;
+                font-size: 1rem;
+                font-weight: 500;
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+              "
+            >
+              <i class="bi bi-filetype-java" aria-hidden="true"></i>Java
+            </span>
+            <span
+              class="badge px-4 py-2"
+              style="
+                background: rgba(255, 255, 255, 0.15);
+                color: white;
+                font-size: 1rem;
+                font-weight: 500;
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+              "
+            >
+              <i class="bi bi-diagram-3 me-2" aria-hidden="true"></i>Data
+              Structures
+            </span>
+            <span
+              class="badge px-4 py-2"
+              style="
+                background: rgba(255, 255, 255, 0.15);
+                color: white;
+                font-size: 1rem;
+                font-weight: 500;
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+              "
+            >
+              <i class="bi bi-graph-up-arrow me-2" aria-hidden="true"></i
+              >PageRank
+            </span>
+            <span
+              class="badge px-4 py-2"
+              style="
+                background: rgba(255, 255, 255, 0.15);
+                color: white;
+                font-size: 1rem;
+                font-weight: 500;
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+              "
+            >
+              <i class="bi bi-search me-2" aria-hidden="true"></i>Information
+              Retrieval
+            </span>
+            <span
+              class="badge px-4 py-2"
+              style="
+                background: rgba(255, 255, 255, 0.15);
+                color: white;
+                font-size: 1rem;
+                font-weight: 500;
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+              "
+            >
+              <i class="bi bi-filetype-xml me-2" aria-hidden="true"></i>XML
+              Parsing
+            </span>
+            <span
+              class="badge px-4 py-2"
+              style="
+                background: rgba(255, 255, 255, 0.15);
+                color: white;
+                font-size: 1rem;
+                font-weight: 500;
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+              "
+            >
+              <i class="bi bi-cpu me-2" aria-hidden="true"></i>Algorithms
+            </span>
+          </div>
+        </div>
+
+        <!-- Learn More Button -->
+        <div class="text-center mb-3">
+          <a
+            href="https://hackmd.io/@csci0200/HyY_ZX94q"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="badge px-5 py-3"
+            style="
+              background: rgba(115, 165, 128, 0.3);
+              border: 2px solid #73a580;
+              color: white;
+              font-size: 1.1rem;
+              font-weight: 500;
+              border-radius: 8px;
+              transition: all 0.3s;
+              text-decoration: none;
+              display: inline-flex;
+              align-items: center;
+              gap: 10px;
+              cursor: pointer;
+            "
+            onmouseover="this.style.background='rgba(115, 165, 128, 0.5)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(115, 165, 128, 0.3)';"
+            onmouseout="this.style.background='rgba(115, 165, 128, 0.3)'; this.style.transform='translateY(0)'; this.style.boxShadow='none';"
+            aria-label="Learn more about Search project on HackMD"
+          >
+            Learn More About Search
+            <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <!-- Back to Top Arrow -->
+        <div class="text-center back-to-top-arrow">
+          <a
+            href="#search"
+            class="text-light bounce-arrow"
+            style="font-size: 2rem; text-decoration: none"
+            >↑</a
+          >
+        </div>
+      </div>
+    </section>
+    <footer
+      class="footer-custom text-center text-light py-3"
+      style="width: 100%; margin-top: 0"
+    >
+      <p class="mb-0">© 2025 Eric Ko. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
