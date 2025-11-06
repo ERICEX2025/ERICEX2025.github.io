@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta Tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- External Stylesheets -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -11,13 +14,19 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
+
+    <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/turtle!.png" />
+
+    <!-- Page Title -->
     <title>Eric Ko</title>
   </head>
 
   <body>
-    <!-- NAVBAR-->
+    <!-- Navigation Bar -->
     <nav
       class="navbar fixed-top navbar-custom navbar-expand-lg navbar-dark shadow-sm"
     >
@@ -56,6 +65,7 @@
       </div>
     </nav>
 
+    <!-- Home Section -->
     <div
       id="home"
       class="d-flex flex-column background justify-content-center align-items-center"
@@ -70,50 +80,42 @@
       </div>
       <div class="fade-in-image">
         <img
-          alt="image of a turtle"
+          alt="Turtle mascot"
           src="images/turtle!.png"
-          style="width: 200px !important; height: 200px !important"
+          class="turtle-image"
         />
       </div>
 
-      <a
-        href="#about"
-        class="text-light mt-0 bounce-arrow"
-        style="font-size: 2rem; text-decoration: none"
-        >↓</a
-      >
+      <!-- Scroll Down Arrow -->
+      <a href="#about" class="text-light mt-0 bounce-arrow scroll-arrow">↓</a>
     </div>
 
+    <!-- Section Divider -->
     <div class="container section-divider">
       <hr class="border-light" />
     </div>
+
+    <!-- About Section -->
     <section id="about">
       <div
         class="d-flex flex-column background justify-content-center align-items-center"
       >
         <h1 class="text-light mb-4">About Me</h1>
         <img
-          alt="image of Eric"
+          alt="Eric Ko"
           src="images/eric.jpg"
-          class="rounded-circle shadow mb-4"
-          style="
-            width: 250px;
-            height: 250px;
-            object-fit: cover;
-            object-position: 35% center;
-            border: 5px solid rgba(255, 255, 255, 0.3);
-          "
+          class="rounded-circle shadow mb-4 profile-image"
         />
-        <div class="container" style="max-width: 800px; padding: 0 20px">
+        <div class="container about-content">
           <div class="text-light text-center">
-            <p class="lead mb-4 mt-2" style="font-size: 1.25rem">
+            <p class="lead mb-4 mt-2 about-text">
               I'm passionate about building creative, impactful products with
               artificial intelligence and leveraging cutting-edge technologies
               to solve real-world problems. I'm especially interested in how AI
               can be applied to create tools that empower people and improve
               everyday experiences.
             </p>
-            <p class="lead mb-0" style="font-size: 1.25rem">
+            <p class="lead mb-0 about-text">
               I enjoy exploring new technologies, diving into systems, and
               tackling challenging problems. I also like playing tennis, reading
               (currently
@@ -121,74 +123,83 @@
               instruments (currently guitar), and drawing. Fun fact — I used to
               compete in esports at a top professional level!
             </p>
+            <!-- Social Media Links -->
             <div class="mt-4 text-center">
               <a
                 href="https://www.linkedin.com/in/eric-long-him-ko"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="text-light me-3 social-icon"
+                aria-label="LinkedIn profile"
               >
-                <i class="bi bi-linkedin" style="font-size: 2rem"></i>
+                <i class="bi bi-linkedin social-icon-size"></i>
               </a>
               <a
                 href="https://github.com/ERICEX2025"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="text-light me-3 social-icon"
+                aria-label="GitHub profile"
               >
-                <i class="bi bi-github" style="font-size: 2rem"></i>
+                <i class="bi bi-github social-icon-size"></i>
               </a>
               <a
                 href="mailto:eric_long_him_ko@alumni.brown.edu"
                 class="text-light social-icon"
+                aria-label="Email"
               >
-                <i class="bi bi-envelope-fill" style="font-size: 2rem"></i>
+                <i class="bi bi-envelope-fill social-icon-size"></i>
               </a>
             </div>
           </div>
         </div>
+        <!-- Scroll Down Arrow -->
         <div class="text-center">
           <a
             href="#experience"
-            class="text-light mt-5 mb-5 bounce-arrow"
-            style="font-size: 2rem; text-decoration: none"
+            class="text-light mt-5 mb-5 bounce-arrow scroll-arrow"
             >↓</a
           >
         </div>
       </div>
     </section>
 
+    <!-- Section Divider -->
     <div class="container section-divider">
       <hr class="border-light" />
     </div>
+
+    <!-- Experience Section -->
     <section
       id="experience"
       class="d-flex flex-column justify-content-center align-items-center background"
     >
       <div class="container py-5">
         <h1 class="text-light mb-4 text-center">Experience</h1>
+
+        <!-- Experience Cards Grid -->
         <div class="row justify-content-center">
           <div class="col-sm-6">
             <div
               class="card m-4 text-center card-custom text-light bg-transparent border-light"
             >
               <div class="card-body">
-                <span class="badge bg-success mb-2" style="font-size: 0.75rem"
-                  >INTERNSHIP</span
-                >
+                <span class="badge bg-success mb-2 badge-size">INTERNSHIP</span>
                 <h5 class="card-title">Revin</h5>
-                <p
-                  class="card-subtitle mb-2 text-light"
-                  style="opacity: 0.8; font-size: 0.9rem"
-                >
+                <p class="card-subtitle mb-2 text-light card-date">
                   Jun 2024 - Aug 2024
                 </p>
                 <p class="card-text">AI Agents for home service businesses</p>
-                <a class="stretched-link" href="work/revin.html"></a>
+                <a
+                  class="stretched-link"
+                  href="work/revin.html"
+                  aria-label="View Revin project"
+                ></a>
               </div>
               <img
                 class="card-img-bottom"
                 src="images/revin.svg"
-                alt="Revin project image"
-                style="object-position: center center"
+                alt="Revin project"
               />
             </div>
           </div>
@@ -198,27 +209,22 @@
               class="card m-4 text-center card-custom text-light bg-transparent border-light"
             >
               <div class="card-body">
-                <span class="badge bg-info mb-2" style="font-size: 0.75rem"
-                  >RESEARCH</span
-                >
+                <span class="badge bg-info mb-2 badge-size">RESEARCH</span>
                 <h5 class="card-title">Systems@Brown</h5>
-                <p
-                  class="card-subtitle mb-2 text-light"
-                  style="opacity: 0.8; font-size: 0.9rem"
-                >
+                <p class="card-subtitle mb-2 text-light card-date">
                   May 2023 - Aug 2023
                 </p>
                 <p class="card-text">Privacy-preserving ad ecosystem</p>
                 <a
                   class="stretched-link"
                   href="research/systems@brown.html"
+                  aria-label="View Systems@Brown research"
                 ></a>
               </div>
               <img
                 class="card-img-bottom"
                 src="images/systems@brown.png"
-                alt="Systems@Brown project image"
-                style="object-position: center center"
+                alt="Systems@Brown research project"
               />
             </div>
           </div>
@@ -227,26 +233,24 @@
               class="card m-4 text-center card-custom text-light bg-transparent border-light"
             >
               <div class="card-body">
-                <span
-                  class="badge bg-warning text-dark mb-2"
-                  style="font-size: 0.75rem"
+                <span class="badge bg-warning text-dark mb-2 badge-size"
                   >PROJECT</span
                 >
                 <h5 class="card-title">Weenix</h5>
-                <p
-                  class="card-subtitle mb-2 text-light"
-                  style="opacity: 0.8; font-size: 0.9rem"
-                >
+                <p class="card-subtitle mb-2 text-light card-date">
                   Jan 2025 - May 2025
                 </p>
                 <p class="card-text">Simple Unix-like operating system</p>
-                <a class="stretched-link" href="projects/weenix.html"></a>
+                <a
+                  class="stretched-link"
+                  href="projects/weenix.html"
+                  aria-label="View Weenix project"
+                ></a>
               </div>
               <img
-                class="card-img-bottom"
+                class="card-img-bottom card-img-weenix"
                 src="images/weenix.png"
-                alt="Weenix Operating System project image"
-                style="object-position: 70% center"
+                alt="Weenix operating system project"
               />
             </div>
           </div>
@@ -256,26 +260,24 @@
               class="card m-4 text-center card-custom text-light bg-transparent border-light"
             >
               <div class="card-body">
-                <span
-                  class="badge bg-warning text-dark mb-2"
-                  style="font-size: 0.75rem"
+                <span class="badge bg-warning text-dark mb-2 badge-size"
                   >PROJECT</span
                 >
                 <h5 class="card-title">IP/TCP</h5>
-                <p
-                  class="card-subtitle mb-2 text-light"
-                  style="opacity: 0.8; font-size: 0.9rem"
-                >
+                <p class="card-subtitle mb-2 text-light card-date">
                   Sep 2024 - Nov 2024
                 </p>
                 <p class="card-text">Virtual IP/TCP networking stack</p>
-                <a class="stretched-link" href="projects/iptcp.html"></a>
+                <a
+                  class="stretched-link"
+                  href="projects/iptcp.html"
+                  aria-label="View IP/TCP project"
+                ></a>
               </div>
               <img
-                class="card-img-bottom"
+                class="card-img-bottom card-img-iptcp"
                 src="images/iptcp.png"
-                alt="Virtual TCP/IP Network Stack project image"
-                style="object-position: center 60%"
+                alt="Virtual TCP/IP network stack project"
               />
             </div>
           </div>
@@ -285,26 +287,24 @@
               class="card m-4 text-center card-custom text-light bg-transparent border-light"
             >
               <div class="card-body">
-                <span
-                  class="badge bg-warning text-dark mb-2"
-                  style="font-size: 0.75rem"
+                <span class="badge bg-warning text-dark mb-2 badge-size"
                   >PROJECT</span
                 >
                 <h5 class="card-title">Search</h5>
-                <p
-                  class="card-subtitle mb-2 text-light"
-                  style="opacity: 0.8; font-size: 0.9rem"
-                >
+                <p class="card-subtitle mb-2 text-light card-date">
                   Apr 2022 - May 2022
                 </p>
                 <p class="card-text">Search engine with PageRank algorithm</p>
-                <a class="stretched-link" href="projects/search.html"></a>
+                <a
+                  class="stretched-link"
+                  href="projects/search.html"
+                  aria-label="View Search project"
+                ></a>
               </div>
               <img
                 class="card-img-bottom"
                 src="images/hello-world.png"
-                alt="Search project image"
-                style="object-position: center center"
+                alt="Search engine project"
               />
             </div>
           </div>
@@ -314,46 +314,49 @@
               class="card m-4 text-center card-custom text-light bg-transparent border-light"
             >
               <div class="card-body">
-                <span
-                  class="badge bg-warning text-dark mb-2"
-                  style="font-size: 0.75rem"
+                <span class="badge bg-warning text-dark mb-2 badge-size"
                   >PROJECT</span
                 >
                 <h5 class="card-title">Evolution</h5>
-                <p
-                  class="card-subtitle mb-2 text-light"
-                  style="opacity: 0.8; font-size: 0.9rem"
-                >
+                <p class="card-subtitle mb-2 text-light card-date">
                   Nov 2021 - Dec 2021
                 </p>
                 <p class="card-text">
                   Arcade with neuroevolution-powered Flappy Bird
                 </p>
-                <a class="stretched-link" href="projects/evolution.html"></a>
+                <a
+                  class="stretched-link"
+                  href="projects/evolution.html"
+                  aria-label="View Evolution project"
+                ></a>
               </div>
               <img
                 class="card-img-bottom"
                 src="images/hello-world.png"
-                alt="Evolution project image"
-                style="object-position: center center"
+                alt="Evolution arcade game project"
               />
             </div>
           </div>
         </div>
 
+        <!-- Back to Top Arrow -->
         <div class="text-center mt-5">
           <a
             href="#home"
-            class="text-light bounce-arrow"
-            style="font-size: 2rem; text-decoration: none"
+            class="text-light bounce-arrow scroll-arrow"
+            aria-label="Back to top"
             >↑</a
           >
         </div>
       </div>
     </section>
+
+    <!-- Footer -->
     <footer class="footer-custom text-center text-light py-3">
       <p class="mb-0">© 2025 Eric Ko. All rights reserved.</p>
     </footer>
+
+    <!-- Bootstrap JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

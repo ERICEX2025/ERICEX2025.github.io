@@ -1,20 +1,46 @@
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+/* Body styling with padding for fixed navbar */
 body {
   background-color: #73a580;
   padding-top: 70px;
 }
 
+/* Base color utility class */
 .color {
   background-color: #73a580;
 }
 
-.navbar-custom {
-  background-color: #4a6b54;
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
 }
 
-.footer {
-  height: 10vh;
+/* Scroll offset to account for fixed navbar */
+section {
+  scroll-margin-top: 80px; /* adjust this to match your navbar height */
 }
 
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Global image styles */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============================================
+   LAYOUT & STRUCTURE
+   ============================================ */
+
+/* Full-height background sections with parallax effect */
 .background {
   min-height: 100vh;
   background-size: cover;
@@ -22,6 +48,211 @@ body {
   background-attachment: fixed;
 }
 
+/* Home section layout */
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#home h1,
+#home h2 {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Turtle image in home section */
+.turtle-image {
+  width: 200px !important;
+  height: 200px !important;
+}
+
+/* About section content container */
+.about-content {
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+/* About section text styling */
+.about-text {
+  font-size: 1.25rem;
+}
+
+/* Profile image in about section */
+.profile-image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: 35% center;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================
+   NAVBAR & FOOTER
+   ============================================ */
+
+/* Custom navbar background color */
+.navbar-custom {
+  background-color: #4a6b54;
+}
+
+/* ============================================
+   EXPERIENCE CARDS
+   ============================================ */
+
+/* Base card styling */
+.card-custom {
+  position: relative;
+  overflow: hidden; /* Keep for rounded corners */
+  min-height: 350px; /* Allow cards to grow taller if needed */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #000;
+}
+
+/* Card badge and date styling */
+.badge-size {
+  font-size: 0.75rem;
+}
+
+.card-date {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+/* Card image styling with performance optimizations */
+.card-custom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  transition: opacity 0.4s ease, transform 0.3s ease;
+}
+
+/* Card image positioning - fills entire card */
+.card-img-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important; /* Fill entire card */
+  object-fit: contain !important; /* Show full image without zooming/cropping */
+  object-position: center;
+  background-color: #000; /* Black background fills gaps */
+  z-index: 0; /* Ensure image stays behind text overlay */
+}
+
+/* Card image specific positioning */
+.card-img-weenix {
+  object-position: 70% center;
+}
+
+.card-img-iptcp {
+  object-position: center 60%;
+}
+
+/* Gradient overlay for better text readability */
+.card-custom::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+  opacity: 0.7;
+  z-index: 1;
+  transition: opacity 0.4s ease;
+}
+
+/* Text overlay layer - hidden by default, shown on hover */
+.card-custom .card-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.65);
+  opacity: 0;
+  z-index: 2;
+  transform: translateY(15px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Card hover effects */
+.card-custom:hover::before {
+  opacity: 0.85;
+}
+
+.card-custom:hover .card-body {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-custom:hover img {
+  transform: scale(1.08);
+  opacity: 0.3;
+}
+
+.card-custom:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
+}
+
+/* General card hover effect */
+.card:hover,
+.card:focus {
+  filter: brightness(85%);
+}
+
+/* ============================================
+   SOCIAL ICONS
+   ============================================ */
+
+.social-icon {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  text-decoration: none;
+  color: #dff0d8;
+}
+
+/* Social icon sizing */
+.social-icon-size {
+  font-size: 2rem;
+}
+
+/* ============================================
+   SECTION DIVIDERS
+   ============================================ */
+
+.section-divider hr {
+  border-color: rgba(255, 255, 255, 0.2);
+  margin: 0 auto;
+  width: 80%;
+  opacity: 0.2;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* ============================================
+   ANIMATIONS & SCROLL ELEMENTS
+   ============================================ */
+
+/* Fade-in animation for home section elements */
 .fade-in-image {
   animation: fadeIn 5s;
 }
@@ -35,9 +266,10 @@ body {
   }
 }
 
-.card:hover,
-.card:focus {
-  filter: brightness(85%);
+/* Scroll arrow styling */
+.scroll-arrow {
+  font-size: 2rem;
+  text-decoration: none;
 }
 
 /* Bouncing arrow that appears after fade-ins */
@@ -73,119 +305,20 @@ body {
     transform: translateY(-6px);
   }
 }
-/* --- EXPERIENCE CARD HOVER EFFECT --- */
-.card-custom {
-  position: relative;
-  overflow: hidden; /* Keep for rounded corners */
-  min-height: 350px; /* Allow cards to grow taller if needed */
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: #000;
-}
 
-.card-custom img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  image-rendering: auto;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  transition: opacity 0.4s ease, transform 0.3s ease;
-}
-
-.card-img-bottom {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100% !important; /* Fill entire card */
-  object-fit: contain !important; /* Show full image without zooming/cropping */
-  object-position: center;
-  background-color: #000; /* Black background fills gaps */
-  z-index: 0; /* Ensure image stays behind text overlay */
-}
-
-/* --- Enhanced Experience Card Design --- */
-.card-custom::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
-  opacity: 0.7;
-  z-index: 1;
-  transition: opacity 0.4s ease;
-}
-
-.card-custom:hover::before {
-  opacity: 0.85;
-}
-
-/* Overlay layer for text with smooth reveal */
-.card-custom .card-body {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  background: rgba(0, 0, 0, 0.65);
-  opacity: 0;
-  z-index: 2;
-  transform: translateY(15px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  padding: 20px;
-  text-align: center;
-}
-
-.card-custom:hover .card-body {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Image zoom and dim effect */
-.card-custom:hover img {
-  transform: scale(1.08);
-  opacity: 0.3;
-}
-
-/* Subtle floating effect on hover */
-.card-custom:hover {
-  transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
-}
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-#home h1,
-#home h2 {
-  text-align: center;
-  margin: 0 auto;
-}
-
-#home {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
 
 @media (max-width: 768px) {
+  /* Disable parallax on mobile for better performance */
   .background {
     background-attachment: scroll;
     min-height: 100vh;
     padding: 60px 0;
   }
 
+  /* Smaller heading on mobile */
   #home h2 {
     font-size: 1.25rem;
     line-height: 1.4;
@@ -217,39 +350,5 @@ img {
   .card-custom:hover img {
     transform: none;
     opacity: 0.4;
-  }
-}
-
-.social-icon {
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.3s;
-}
-
-.social-icon:hover {
-  text-decoration: none;
-  color: #dff0d8;
-}
-
-/* Section divider and scroll offset visibility */
-.section-divider hr {
-  border-color: rgba(255, 255, 255, 0.2);
-  margin: 0 auto;
-  width: 80%;
-  opacity: 0.2;
-  transition: opacity 0.3s ease-in-out;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-section {
-  scroll-margin-top: 80px; /* adjust this to match your navbar height */
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
   }
 }
