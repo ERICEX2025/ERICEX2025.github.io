@@ -106,7 +106,7 @@ img {
 /* Back button styling - matches page badge/button style */
 .back-button {
   position: absolute;
-  top: 0;
+  top: 15px;
   left: 15px; /* Align with container content padding (Bootstrap default) */
   z-index: 10;
   background: rgba(255, 255, 255, 0.15);
