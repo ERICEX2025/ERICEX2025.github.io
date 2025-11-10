@@ -63,6 +63,11 @@ img {
   margin: 0 auto;
 }
 
+/* Move home section heading up slightly */
+#home .fade-in-image:first-child {
+  margin-top: -130px;
+}
+
 /* Turtle image in home section */
 .turtle-image {
   width: 200px !important;
@@ -96,6 +101,33 @@ img {
 /* Custom navbar background color */
 .navbar-custom {
   background-color: #4a6b54;
+}
+
+/* Back button styling - matches page badge/button style */
+.back-button {
+  position: absolute;
+  top: 0;
+  left: 15px; /* Align with container content padding (Bootstrap default) */
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  color: white;
+  text-decoration: none;
 }
 
 /* ============================================
