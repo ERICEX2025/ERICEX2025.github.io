@@ -53,9 +53,9 @@
   --color-bg-alt: #f6f8fa;
   --color-text: #1f2328;
   --color-text-muted: #656d76;
-  --color-accent: #d97706;
-  --color-accent-light: rgba(217, 119, 6, 0.1);
-  --color-accent-hover: #b45309;
+  --color-accent: #2563eb;
+  --color-accent-light: rgba(37, 99, 235, 0.1);
+  --color-accent-hover: #1d4ed8;
   --color-border: #d0d7de;
   --color-card-bg: #ffffff;
   --color-card-shadow: rgba(0, 0, 0, 0.08);
@@ -188,7 +188,7 @@ ul {
 }
 
 [data-theme="light"] .navbar--scrolled {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(210, 230, 248, 0.8);
 }
 
 .navbar__inner {
@@ -505,6 +505,26 @@ ul {
   color: #818cf8;
 }
 
+[data-theme="light"] .timeline__badge--work {
+  background: rgba(5, 150, 105, 0.1);
+  color: #059669;
+}
+
+[data-theme="light"] .timeline__badge--project {
+  background: rgba(109, 40, 217, 0.1);
+  color: #6d28d9;
+}
+
+[data-theme="light"] .timeline__badge--internship {
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+}
+
+[data-theme="light"] .timeline__badge--research {
+  background: rgba(79, 70, 229, 0.1);
+  color: #4f46e5;
+}
+
 .timeline__title {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-semibold);
@@ -776,7 +796,7 @@ ul {
 }
 
 [data-theme="light"] .btn-outline:hover {
-  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
 /* ============================================

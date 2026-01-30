@@ -248,7 +248,7 @@ function initStarfield() {
   ];
 
   function createClouds() {
-    const count = width < 600 ? 4 : width < 1200 ? 6 : 8;
+    const count = width < 600 ? 8 : width < 1200 ? 12 : 16;
     clouds = [];
 
     for (let i = 0; i < count; i++) {
@@ -266,10 +266,10 @@ function initStarfield() {
 
       clouds.push({
         x: Math.random() * (width + 400) - 200,
-        y: Math.random() * height * 0.65 + height * 0.08,
+        y: Math.random() * height * 0.5 + height * 0.03,
         scale: scale,
         bumps: bumps,
-        baseAlpha: Math.random() * 0.06 + 0.12,
+        baseAlpha: Math.random() * 0.1 + 0.25,
         driftX: Math.random() * 0.12 + 0.04,
         phase: Math.random() * Math.PI * 2,
         bobSpeed: Math.random() * 0.0003 + 0.0001,
@@ -304,20 +304,47 @@ function initStarfield() {
     }
 
     ctx.closePath();
-    ctx.fillStyle = 'rgba(195, 210, 225, ' + alpha + ')';
+
+    // Subtle drop shadow for depth
+    ctx.save();
+    ctx.shadowColor = 'rgba(100, 140, 180, ' + (alpha * 0.4) + ')';
+    ctx.shadowBlur = 18;
+    ctx.shadowOffsetX = 0;
+    ctx.shadowOffsetY = 6;
+    ctx.fillStyle = 'rgba(200, 220, 240, ' + alpha + ')';
     ctx.fill();
+    ctx.restore();
+  }
+
+  function getSunPosition() {
+    var now = new Date();
+    var hours = now.getHours() + now.getMinutes() / 60;
+
+    // Map daytime hours (6am–7pm) to 0–1
+    var t = (hours - 6) / 13;
+    t = Math.max(0, Math.min(1, t));
+
+    // x: arcs from left (0.1) to right (0.9)
+    var x = 0.1 + t * 0.8;
+
+    // y: parabolic arc — highest at noon (t=0.5), lower at sunrise/sunset
+    var minY = 0.08;
+    var maxY = 0.35;
+    var y = 4 * (maxY - minY) * (t - 0.5) * (t - 0.5) + minY;
+
+    return { x: x, y: y };
   }
 
   function drawSun() {
-    // Position in the upper-right area
-    var sx = width * 0.82;
-    var sy = height * 0.12;
+    var pos = getSunPosition();
+    var sx = width * pos.x;
+    var sy = height * pos.y;
     var r = Math.min(width, height) * 0.05;
 
     // Outer halo
     var halo = ctx.createRadialGradient(sx, sy, r * 0.5, sx, sy, r * 6);
-    halo.addColorStop(0, 'rgba(255, 220, 100, 0.08)');
-    halo.addColorStop(0.5, 'rgba(255, 200, 60, 0.03)');
+    halo.addColorStop(0, 'rgba(255, 220, 100, 0.12)');
+    halo.addColorStop(0.5, 'rgba(255, 200, 60, 0.05)');
     halo.addColorStop(1, 'rgba(255, 200, 60, 0)');
     ctx.beginPath();
     ctx.arc(sx, sy, r * 6, 0, Math.PI * 2);
@@ -326,8 +353,8 @@ function initStarfield() {
 
     // Inner glow
     var glow = ctx.createRadialGradient(sx, sy, 0, sx, sy, r * 2);
-    glow.addColorStop(0, 'rgba(255, 230, 140, 0.18)');
-    glow.addColorStop(0.6, 'rgba(255, 210, 80, 0.08)');
+    glow.addColorStop(0, 'rgba(255, 230, 140, 0.28)');
+    glow.addColorStop(0.6, 'rgba(255, 210, 80, 0.12)');
     glow.addColorStop(1, 'rgba(255, 200, 60, 0)');
     ctx.beginPath();
     ctx.arc(sx, sy, r * 2, 0, Math.PI * 2);
@@ -336,8 +363,8 @@ function initStarfield() {
 
     // Core disc
     var core = ctx.createRadialGradient(sx, sy, 0, sx, sy, r);
-    core.addColorStop(0, 'rgba(255, 235, 160, 0.35)');
-    core.addColorStop(0.7, 'rgba(255, 220, 100, 0.2)');
+    core.addColorStop(0, 'rgba(255, 235, 160, 0.5)');
+    core.addColorStop(0.7, 'rgba(255, 220, 100, 0.3)');
     core.addColorStop(1, 'rgba(255, 210, 80, 0)');
     ctx.beginPath();
     ctx.arc(sx, sy, r, 0, Math.PI * 2);
@@ -347,10 +374,12 @@ function initStarfield() {
 
   function drawSkyGradient() {
     var grad = ctx.createLinearGradient(0, 0, 0, height);
-    grad.addColorStop(0,   'rgba(100, 165, 225, 0.8)');
-    grad.addColorStop(0.3, 'rgba(130, 190, 235, 0.5)');
-    grad.addColorStop(0.6, 'rgba(170, 215, 245, 0.2)');
-    grad.addColorStop(1,   'rgba(230, 242, 250, 0)');
+    grad.addColorStop(0,   'rgba(120, 180, 230, 0.5)');
+    grad.addColorStop(0.25,'rgba(140, 200, 240, 0.35)');
+    grad.addColorStop(0.5, 'rgba(165, 215, 245, 0.22)');
+    grad.addColorStop(0.75,'rgba(190, 225, 248, 0.12)');
+    grad.addColorStop(0.92,'rgba(210, 235, 250, 0.05)');
+    grad.addColorStop(1,   'rgba(230, 242, 255, 0)');
     ctx.fillStyle = grad;
     ctx.fillRect(0, 0, width, height);
   }
