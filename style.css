@@ -962,4 +962,9 @@ ul {
   .reflection-card {
     padding: var(--space-lg);
   }
+
+  .intro-card__image,
+  .reflection-card__image {
+    max-width: 100%;
+  }
 }
