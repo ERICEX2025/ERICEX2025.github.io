@@ -2,6 +2,11 @@ title: Eric Ko
 description: AI Engineer & Brown University Graduate
 url: https://ericex2025.github.io
 baseurl: ""
+author: Eric Ko
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 exclude:
   - README.md

@@ -16,7 +16,7 @@
     />
     <link rel="stylesheet" href="{{ '/style.css' | relative_url }}" />
     <link rel="icon" type="image/png" href="{{ '/images/turtle!.png' | relative_url }}" />
-    <title>{{ page.title }}{% unless page.title == site.title %} - {{ site.title }}{% endunless %}</title>
+    {% seo %}
     <script>
       (function() {
         var dark;
