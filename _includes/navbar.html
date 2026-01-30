@@ -1,0 +1,19 @@
+<nav class="navbar" role="navigation">
+  <div class="container navbar__inner">
+    <a href="{{ '/' | relative_url }}" class="navbar__brand">
+      Eric Ko
+    </a>
+    <button
+      class="navbar__toggle"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+    >
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="navbar__links">
+      <li><a href="{{ '/' | relative_url }}#home" class="navbar__link">Home</a></li>
+      <li><a href="{{ '/' | relative_url }}#about" class="navbar__link">About</a></li>
+      <li><a href="{{ '/' | relative_url }}#experience" class="navbar__link">Experience</a></li>
+    </ul>
+  </div>
+</nav>

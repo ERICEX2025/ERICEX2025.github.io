@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}" />
+    <link rel="icon" type="image/png" href="{{ '/images/turtle!.png' | relative_url }}" />
+    <title>{{ page.title }}{% unless page.title == site.title %} - {{ site.title }}{% endunless %}</title>
+    <script>
+      (function() {
+        var dark;
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
+          dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        } else {
+          var h = new Date().getHours();
+          dark = h >= 19 || h < 7;
+        }
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      })();
+    </script>
+  </head>
+
+  <body>
+    <canvas class="starfield" aria-hidden="true"></canvas>
+    {% include navbar.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+
+    <script src="{{ '/main.js' | relative_url }}"></script>
+  </body>
+</html>

@@ -1,317 +1,147 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Meta Tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+---
+title: Eric Ko
+layout: default
+---
 
-    <!-- External Stylesheets -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="container hero__inner">
+    <img
+      src="{{ '/images/eric.jpg' | relative_url }}"
+      alt="Eric Ko"
+      class="hero__photo fade-in"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
-
-    <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="style.css" />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/turtle!.png" />
-
-    <!-- Page Title -->
-    <title>Eric Ko</title>
-  </head>
-
-  <body>
-    <!-- Navigation Bar -->
-    <nav
-      class="navbar fixed-top navbar-custom navbar-expand-lg navbar-dark shadow-sm"
-    >
-      <div class="container">
-        <a href="#" class="navbar-brand">
-          <!-- Logo Text -->
-          <span class="fw-bold">Eric Ko</span>
+    <div class="hero__content">
+      <h1 class="hero__name fade-in">Eric Ko</h1>
+      <p class="hero__tagline fade-in">
+        AI Engineer &amp; Brown University Graduate
+      </p>
+      <div class="hero__socials fade-in">
+        <a
+          href="https://www.linkedin.com/in/eric-long-him-ko"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          aria-label="LinkedIn"
+        >
+          <i class="bi bi-linkedin"></i>
         </a>
-
-        <button
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler"
+        <a
+          href="https://github.com/ERICEX2025"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          aria-label="GitHub"
         >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div
-          id="navbarSupportedContent"
-          class="collapse navbar-collapse justify-content-end"
+          <i class="bi bi-github"></i>
+        </a>
+        <a
+          href="mailto:eric_long_him_ko@alumni.brown.edu"
+          class="social-link"
+          aria-label="Email"
         >
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#experience">Experience</a>
-            </li>
-          </ul>
-        </div>
+          <i class="bi bi-envelope-fill"></i>
+        </a>
       </div>
-    </nav>
+    </div>
+  </div>
+</section>
 
-    <!-- Home Section -->
-    <section
-      id="home"
-      class="d-flex flex-column background justify-content-center align-items-center"
-    >
-      <div class="fade-in-image">
-        <h1 class="text-light">Hello, I'm Eric Ko.</h1>
-      </div>
-      <div class="fade-in-image">
-        <h2 class="text-light">
-          An AI Engineer who recently graduated from Brown!
-        </h2>
-      </div>
-      <div class="fade-in-image">
-        <img
-          alt="Turtle mascot"
-          src="images/turtle!.png"
-          class="turtle-image"
-        />
+<div class="section-divider"></div>
+
+<!-- About Section -->
+<section id="about" class="section">
+  <div class="container container--narrow">
+    <h2 class="section__heading fade-in">About Me</h2>
+    <div class="about__text fade-in">
+      <p>
+        With AI being such a fast and influential field, I'm passionate
+        about exploring its potential to redefine our everyday experiences.
+        I'm particularly focused on applied AI and creating tools that
+        empower people and improve lives.
+      </p>
+      <p>
+        In my free time, I enjoy playing tennis, catching up on anime, and
+        trying new cafes. I'm currently learning the guitar and reading
+        <em>Influence Is Your Superpower</em> by Zoe Chance. In the past, I
+        competed in esports professionally!
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- Experience Section -->
+<section id="experience" class="section">
+  <div class="container">
+    <h2 class="section__heading fade-in">Experience</h2>
+
+    <div class="timeline">
+      <div class="timeline__item fade-in">
+        <div class="timeline__dot"></div>
+        <span class="timeline__badge timeline__badge--work">Work</span>
+        <h3 class="timeline__title">
+          <a href="{{ '/work/chima.html' | relative_url }}">Chima (YC W23)</a>
+        </h3>
+        <span class="timeline__date">Nov 2025 – Jan 2026</span>
+        <p class="timeline__desc">
+          Enterprise AI revenue platform with voice, chat &amp; email agents
+        </p>
       </div>
 
-      <!-- Scroll Down Arrow -->
-      <a href="#about" class="text-light mt-0 bounce-arrow scroll-arrow">↓</a>
-    </section>
+      <div class="timeline__item fade-in">
+        <div class="timeline__dot"></div>
+        <span class="timeline__badge timeline__badge--project">Project</span>
+        <h3 class="timeline__title">
+          <a href="{{ '/projects/weenix.html' | relative_url }}">Weenix</a>
+        </h3>
+        <span class="timeline__date">Jan 2025 – May 2025</span>
+        <p class="timeline__desc">Simple Unix-like operating system</p>
+      </div>
 
-    <!-- Section Divider -->
-    <div class="container section-divider">
-      <hr class="border-light" />
+      <div class="timeline__item fade-in">
+        <div class="timeline__dot"></div>
+        <span class="timeline__badge timeline__badge--project">Project</span>
+        <h3 class="timeline__title">
+          <a href="{{ '/projects/iptcp.html' | relative_url }}">IP/TCP</a>
+        </h3>
+        <span class="timeline__date">Sep 2024 – Nov 2024</span>
+        <p class="timeline__desc">Virtual IP/TCP networking stack</p>
+      </div>
+
+      <div class="timeline__item fade-in">
+        <div class="timeline__dot"></div>
+        <span class="timeline__badge timeline__badge--internship">Internship</span>
+        <h3 class="timeline__title">
+          <a href="{{ '/work/revin.html' | relative_url }}">Revin</a>
+        </h3>
+        <span class="timeline__date">Jun 2024 – Aug 2024</span>
+        <p class="timeline__desc">
+          AI Agents for home service businesses
+        </p>
+      </div>
+
+      <!-- <div class="timeline__item fade-in">
+        <div class="timeline__dot"></div>
+        <span class="timeline__badge timeline__badge--research">Research</span>
+        <h3 class="timeline__title">
+          <a href="{{ '/research/systems@brown.html' | relative_url }}">Systems@Brown</a>
+        </h3>
+        <span class="timeline__date">May 2023 – Aug 2023</span>
+        <p class="timeline__desc">Privacy-preserving ad ecosystem</p>
+      </div> -->
     </div>
 
-    <!-- About Section -->
-    <section id="about">
-      <div
-        class="d-flex flex-column background justify-content-center align-items-center"
+    <div class="section__cta fade-in">
+      <a
+        href="https://github.com/ERICEX2025"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-outline"
       >
-        <h1 class="text-light mb-4">About Me</h1>
-        <img
-          alt="Eric Ko"
-          src="images/eric.jpg"
-          class="rounded-circle shadow mb-4 profile-image"
-        />
-        <div class="container about-content">
-          <div class="text-light text-center">
-            <p class="lead mb-4 mt-2 about-text">
-              With AI being such a fast and influential field, 
-              I'm passionate about exploring its potential to redefine our everyday experiences.
-              I'm particularly focused on applied AI and creating tools that empower people and improve lives.
-            </p>
-            <p class="lead mb-0 about-text">
-              In my free time, I enjoy playing tennis, catching up on anime, and trying new cafes.
-              I'm currently learning the guitar and reading <em>Influence Is Your Superpower</em> by Zoe Chance. In the past, I competed in esports professionally!
-            </p>
-            <!-- Social Media Links -->
-            <div class="mt-4 text-center">
-              <a
-                href="https://www.linkedin.com/in/eric-long-him-ko"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-light me-3 social-icon"
-                aria-label="LinkedIn profile"
-              >
-                <i class="bi bi-linkedin social-icon-size"></i>
-              </a>
-              <a
-                href="https://github.com/ERICEX2025"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-light me-3 social-icon"
-                aria-label="GitHub profile"
-              >
-                <i class="bi bi-github social-icon-size"></i>
-              </a>
-              <a
-                href="mailto:ericlonghimko@gmail.com"
-                class="text-light social-icon"
-                aria-label="Email"
-              >
-                <i class="bi bi-envelope-fill social-icon-size"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- Scroll Down Arrow -->
-        <div class="text-center">
-          <a
-            href="#experience"
-            class="text-light mt-5 mb-5 bounce-arrow scroll-arrow"
-            >↓</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <!-- Section Divider -->
-    <div class="container section-divider">
-      <hr class="border-light" />
+        <i class="bi bi-github"></i> See More Projects
+      </a>
     </div>
-
-    <!-- Experience Section -->
-    <section
-      id="experience"
-      class="d-flex flex-column justify-content-center align-items-center background"
-    >
-      <div class="container py-5">
-        <h1 class="text-light mb-4 text-center">Experience</h1>
-
-        <!-- Experience Cards Grid -->
-        <div class="row justify-content-center">
-          <div class="col-sm-6">
-            <div
-              class="card m-4 text-center card-custom text-light bg-transparent border-light"
-            >
-              <div class="card-body">
-                <span class="badge bg-success mb-2 badge-size">INTERNSHIP</span>
-                <h5 class="card-title">Revin</h5>
-                <p class="card-subtitle mb-2 text-light card-date">
-                  Jun 2024 - Aug 2024
-                </p>
-                <p class="card-text">AI Agents for home service businesses</p>
-                <a
-                  class="stretched-link"
-                  href="work/revin.html"
-                  aria-label="View Revin project"
-                ></a>
-              </div>
-              <img
-                class="card-img-bottom"
-                src="images/revin.svg"
-                alt="Revin project"
-              />
-            </div>
-          </div>
-
-          <div class="col-sm-6">
-            <div
-              class="card m-4 text-center card-custom text-light bg-transparent border-light"
-            >
-              <div class="card-body">
-                <span class="badge bg-info mb-2 badge-size">RESEARCH</span>
-                <h5 class="card-title">Systems@Brown</h5>
-                <p class="card-subtitle mb-2 text-light card-date">
-                  May 2023 - Aug 2023
-                </p>
-                <p class="card-text">Privacy-preserving ad ecosystem</p>
-                <a
-                  class="stretched-link"
-                  href="research/systems@brown.html"
-                  aria-label="View Systems@Brown research"
-                ></a>
-              </div>
-              <img
-                class="card-img-bottom"
-                src="images/systems@brown.png"
-                alt="Systems@Brown research project"
-              />
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div
-              class="card m-4 text-center card-custom text-light bg-transparent border-light"
-            >
-              <div class="card-body">
-                <span class="badge bg-warning text-dark mb-2 badge-size"
-                  >PROJECT</span
-                >
-                <h5 class="card-title">Weenix</h5>
-                <p class="card-subtitle mb-2 text-light card-date">
-                  Jan 2025 - May 2025
-                </p>
-                <p class="card-text">Simple Unix-like operating system</p>
-                <a
-                  class="stretched-link"
-                  href="projects/weenix.html"
-                  aria-label="View Weenix project"
-                ></a>
-              </div>
-              <img
-                class="card-img-bottom card-img-weenix"
-                src="images/weenix.png"
-                alt="Weenix operating system project"
-              />
-            </div>
-          </div>
-
-          <div class="col-sm-6">
-            <div
-              class="card m-4 text-center card-custom text-light bg-transparent border-light"
-            >
-              <div class="card-body">
-                <span class="badge bg-warning text-dark mb-2 badge-size"
-                  >PROJECT</span
-                >
-                <h5 class="card-title">IP/TCP</h5>
-                <p class="card-subtitle mb-2 text-light card-date">
-                  Sep 2024 - Nov 2024
-                </p>
-                <p class="card-text">Virtual IP/TCP networking stack</p>
-                <a
-                  class="stretched-link"
-                  href="projects/iptcp.html"
-                  aria-label="View IP/TCP project"
-                ></a>
-              </div>
-              <img
-                class="card-img-bottom card-img-iptcp"
-                src="images/iptcp.png"
-                alt="Virtual TCP/IP network stack project"
-              />
-            </div>
-          </div>
-
-        <!-- See More Projects Button -->
-        <div class="text-center mt-4 mb-4">
-          <a
-            href="https://github.com/ERICEX2025"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-outline-light btn-lg"
-            aria-label="View more projects on GitHub"
-          >
-            <i class="bi bi-github me-2"></i>See More Projects
-          </a>
-        </div>
-
-        <!-- Back to Top Arrow -->
-        <div class="text-center mt-4">
-          <a
-            href="#home"
-            class="text-light bounce-arrow scroll-arrow"
-            aria-label="Back to top"
-            >↑</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer-custom text-center text-light py-3">
-      <hr class="border-light mb-3" style="opacity: 0.2" />
-      <p class="mb-0">© 2025 Eric Ko. All rights reserved.</p>
-    </footer>
-
-    <!-- Bootstrap JavaScript Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Chat Widget -->
-    <!-- Chat Widget -->
-<script src="https://reever.withchima.com/chat-widget.js" data-agent-id="bab2f8b7-06cd-40f2-906c-e53ac188fbb9" async></script>
-  </body>
-</html>
+  </div>
+</section>

@@ -1,0 +1,10 @@
+title: Eric Ko
+description: AI Engineer & Brown University Graduate
+url: https://ericex2025.github.io
+baseurl: ""
+
+exclude:
+  - README.md
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock

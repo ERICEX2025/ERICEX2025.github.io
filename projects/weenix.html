@@ -1,686 +1,184 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="../style.css" />
-    <link rel="icon" type="image/png" href="../images/turtle!.png" />
-    <title>Weenix - Eric Ko</title>
-    <style>
-      @media (max-width: 768px) {
-        .technologies-container {
-          flex-direction: column !important;
-          align-items: center !important;
-        }
-      }
-    </style>
-  </head>
+---
+title: Weenix
+layout: detail
+---
 
-  <body>
-    <!-- NAVBAR-->
-    <nav
-      class="navbar fixed-top navbar-custom navbar-expand-lg navbar-dark shadow-sm"
-      role="navigation"
-    >
-      <div class="container">
-        <a href="../index.html" class="navbar-brand">
-          <span class="font-weight-bold">Eric Ko</span>
-        </a>
+<header class="detail-header fade-in">
+  <h1 class="detail-header__title">Weenix</h1>
+  <div class="detail-header__meta">
+    <span class="meta-badge">
+      <i class="bi bi-calendar3" aria-hidden="true"></i> Jan 2025 – May 2025
+    </span>
+    <span class="meta-badge">
+      <i class="bi bi-mortarboard" aria-hidden="true"></i> Brown CS 1690
+    </span>
+  </div>
+</header>
 
-        <button
-          type="button"
-          class="navbar-toggler"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+<div class="intro-card fade-in">
+  <img
+    src="{{ '/images/weenix.png' | relative_url }}"
+    alt="Weenix operating system illustration"
+    class="intro-card__image"
+    loading="lazy"
+  />
+  <p class="intro-card__text">
+    As part of Brown University's renowned Operating Systems course
+    (CS1690), I developed Weenix, a fully functional, Unix-like
+    operating system. The semester-long project was divided into five
+    major components, each building on the last to explore a
+    fundamental layer of how an operating system works:
+    Procs, Drivers, VFS, S5FS, and VM.
+  </p>
+</div>
 
-        <div
-          id="navbarSupportedContent"
-          class="collapse navbar-collapse justify-content-end"
-        >
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#weenix">Introduction</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#core-components">Components</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#reflection">Reflection</a>
-            </li>
-          </ul>
-        </div>
+<div class="tech-badges fade-in">
+  <span class="tech-badge">
+    <i class="bi bi-filetype-c" aria-hidden="true"></i> C
+  </span>
+  <span class="tech-badge">
+    <i class="bi bi-cpu" aria-hidden="true"></i> Operating Systems
+  </span>
+  <span class="tech-badge">
+    <i class="bi bi-gear-wide" aria-hidden="true"></i> Systems Programming
+  </span>
+  <span class="tech-badge">
+    <i class="bi bi-box-seam" aria-hidden="true"></i> Kernel Development
+  </span>
+</div>
+
+<div class="detail-cards">
+  <div class="detail-card fade-in">
+    <div class="detail-card__header">
+      <div class="detail-card__icon">
+        <i class="bi bi-diagram-3-fill" aria-hidden="true"></i>
       </div>
-    </nav>
-
-    <!-- Introduction Section -->
-    <section
-      id="weenix"
-      class="d-flex flex-column align-items-center background"
-      style="
-        padding-bottom: 30px;
-        min-height: auto;
-        height: auto;
-        padding-top: 0;
-        position: relative;
-      "
-    >
-      <div
-        class="container"
-        style="max-width: 1000px; padding-top: 40px; position: relative"
-      >
-        <!-- Back Button -->
-        <a href="../index.html#experience" class="text-light back-button">
-          <i class="bi bi-arrow-left me-2"></i>Back
-        </a>
-        <!-- Header Section -->
-        <div class="text-center">
-          <h1
-            class="text-light mb-3 mt-5"
-            style="font-size: 2.5rem; font-weight: 600; letter-spacing: -0.5px"
-          >
-            Weenix
-          </h1>
-          <div
-            class="d-flex align-items-center justify-content-center gap-3 mb-4"
-            role="group"
-            aria-label="Project date and course"
-          >
-            <span
-              class="badge"
-              style="
-                background: rgba(255, 255, 255, 0.2);
-                color: white;
-                padding: 8px 16px;
-                font-size: 0.9rem;
-                font-weight: 400;
-              "
-            >
-              <i class="bi bi-calendar3 me-2" aria-hidden="true"></i>Jan 2025 –
-              May 2025
-            </span>
-            <span
-              class="badge"
-              style="
-                background: rgba(255, 255, 255, 0.2);
-                color: white;
-                padding: 8px 16px;
-                font-size: 0.9rem;
-                font-weight: 400;
-              "
-            >
-              <i class="bi bi-mortarboard me-2" aria-hidden="true"></i>Brown CS
-              1690
-            </span>
-          </div>
-        </div>
-
-        <!-- Introduction Card -->
-        <div
-          class="card"
-          style="
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-          "
-        >
-          <div class="card-body p-4 d-flex flex-column align-items-center">
-            <img
-              src="../images/weenix.png"
-              alt="Weenix operating system illustration"
-              title="Weenix Operating System"
-              loading="lazy"
-              style="
-                max-width: 550px;
-                width: 100%;
-                height: auto;
-                object-position: 70% center;
-                margin-bottom: 24px;
-              "
-            />
-            <p
-              class="text-light mb-0"
-              style="font-size: 1.15rem; line-height: 1.8; text-align: center"
-            >
-              As part of Brown University's renowned Operating Systems course
-              (CS1690), I developed Weenix, a fully functional, Unix-like
-              operating system. The semester-long project was divided into five
-              major components, each building on the last to explore a
-              fundamental layer of how an operating system works:
-              <br />Procs, Drivers, VFS, S5FS, and VM.
-            </p>
-          </div>
-        </div>
-
-        <!-- Technologies Used Section -->
-        <div class="mt-4 mb-4">
-          <div
-            class="d-flex flex-wrap gap-3 justify-content-center technologies-container"
-          >
-            <span
-              class="badge px-4 py-2"
-              style="
-                background: rgba(255, 255, 255, 0.15);
-                color: white;
-                font-size: 1rem;
-                font-weight: 500;
-                border-radius: 8px;
-                border: 1px solid rgba(255, 255, 255, 0.2);
-              "
-            >
-              <i class="bi bi-filetype-c" aria-hidden="true"></i>C
-            </span>
-            <span
-              class="badge px-4 py-2"
-              style="
-                background: rgba(255, 255, 255, 0.15);
-                color: white;
-                font-size: 1rem;
-                font-weight: 500;
-                border-radius: 8px;
-                border: 1px solid rgba(255, 255, 255, 0.2);
-              "
-            >
-              <i class="bi bi-cpu me-2" aria-hidden="true"></i>Operating Systems
-            </span>
-            <span
-              class="badge px-4 py-2"
-              style="
-                background: rgba(255, 255, 255, 0.15);
-                color: white;
-                font-size: 1rem;
-                font-weight: 500;
-                border-radius: 8px;
-                border: 1px solid rgba(255, 255, 255, 0.2);
-              "
-            >
-              <i class="bi bi-gear-wide me-2" aria-hidden="true"></i>Systems
-              Programming
-            </span>
-            <span
-              class="badge px-4 py-2"
-              style="
-                background: rgba(255, 255, 255, 0.15);
-                color: white;
-                font-size: 1rem;
-                font-weight: 500;
-                border-radius: 8px;
-                border: 1px solid rgba(255, 255, 255, 0.2);
-              "
-            >
-              <i class="bi bi-box-seam me-2" aria-hidden="true"></i>Kernel
-              Development
-            </span>
-          </div>
-        </div>
+      <div>
+        <h3 class="detail-card__title">Procs (Processes and Threads)</h3>
+        <p class="detail-card__body">
+          The foundation of Weenix began with implementing kernel
+          threads and process management. I built the scheduler,
+          context switching, and basic synchronization primitives
+          like mutexes and condition variables. This stage
+          introduced the core concepts of concurrency and CPU
+          scheduling, giving me hands-on insight into how an OS
+          multiplexes the processor among multiple tasks.
+        </p>
       </div>
-    </section>
-
-    <!-- Section Divider -->
-    <div class="container section-divider">
-      <hr class="border-light" />
     </div>
+  </div>
 
-    <!-- Core Components Section -->
-    <section
-      id="core-components"
-      class="d-flex flex-column align-items-center background"
-      style="
-        padding-top: 30px;
-        padding-bottom: 30px;
-        min-height: auto;
-        height: auto;
-      "
-    >
-      <div class="container" style="max-width: 1000px; position: relative">
-        <div class="mb-4 mt-4">
-          <div class="row g-4">
-            <!-- Cards (unchanged content) -->
-            <div class="col-12">
-              <div
-                class="card h-100"
-                style="
-                  background: rgba(255, 255, 255, 0.06);
-                  border: 1px solid rgba(255, 255, 255, 0.12);
-                  border-radius: 10px;
-                  transition: transform 0.3s, box-shadow 0.3s;
-                "
-                onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)';"
-                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';"
-              >
-                <div class="card-body p-4">
-                  <div class="d-flex align-items-start mb-3">
-                    <div
-                      style="
-                        width: 40px;
-                        height: 40px;
-                        background: rgba(115, 165, 128, 0.2);
-                        border-radius: 8px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        margin-right: 15px;
-                        flex-shrink: 0;
-                      "
-                    >
-                      <i
-                        class="bi bi-diagram-3-fill"
-                        style="font-size: 1.2rem; color: #73a580"
-                        aria-hidden="true"
-                      ></i>
-                    </div>
-                    <div>
-                      <h4
-                        class="text-light mb-2"
-                        style="font-size: 1.2rem; font-weight: 600"
-                      >
-                        Procs (Processes and Threads)
-                      </h4>
-                      <p
-                        class="text-light mb-0"
-                        style="
-                          opacity: 0.9;
-                          line-height: 1.6;
-                          font-size: 0.95rem;
-                        "
-                      >
-                        The foundation of Weenix began with implementing kernel
-                        threads and process management. I built the scheduler,
-                        context switching, and basic synchronization primitives
-                        like mutexes and condition variables. This stage
-                        introduced the core concepts of concurrency and CPU
-                        scheduling, giving me hands-on insight into how an OS
-                        multiplexes the processor among multiple tasks.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-12">
-              <div
-                class="card h-100"
-                style="
-                  background: rgba(255, 255, 255, 0.06);
-                  border: 1px solid rgba(255, 255, 255, 0.12);
-                  border-radius: 10px;
-                  transition: transform 0.3s, box-shadow 0.3s;
-                "
-                onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)';"
-                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';"
-              >
-                <div class="card-body p-4">
-                  <div class="d-flex align-items-start mb-3">
-                    <div
-                      style="
-                        width: 40px;
-                        height: 40px;
-                        background: rgba(115, 165, 128, 0.2);
-                        border-radius: 8px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        margin-right: 15px;
-                        flex-shrink: 0;
-                      "
-                    >
-                      <i
-                        class="bi bi-hdd-stack-fill"
-                        style="font-size: 1.2rem; color: #73a580"
-                        aria-hidden="true"
-                      ></i>
-                    </div>
-                    <div>
-                      <h4
-                        class="text-light mb-2"
-                        style="font-size: 1.2rem; font-weight: 600"
-                      >
-                        Drivers (Device Drivers)
-                      </h4>
-                      <p
-                        class="text-light mb-0"
-                        style="
-                          opacity: 0.9;
-                          line-height: 1.6;
-                          font-size: 0.95rem;
-                        "
-                      >
-                        Next, I implemented device drivers for the keyboard,
-                        console, and timer hardware. This involved handling
-                        interrupts, writing low-level I/O routines, and exposing
-                        simple interfaces that higher layers of the kernel could
-                        call. Developing drivers made me appreciate the
-                        precision and discipline required to safely interact
-                        with hardware in a multitasking system.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-12">
-              <div
-                class="card h-100"
-                style="
-                  background: rgba(255, 255, 255, 0.06);
-                  border: 1px solid rgba(255, 255, 255, 0.12);
-                  border-radius: 10px;
-                  transition: transform 0.3s, box-shadow 0.3s;
-                "
-                onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)';"
-                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';"
-              >
-                <div class="card-body p-4">
-                  <div class="d-flex align-items-start mb-3">
-                    <div
-                      style="
-                        width: 40px;
-                        height: 40px;
-                        background: rgba(115, 165, 128, 0.2);
-                        border-radius: 8px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        margin-right: 15px;
-                        flex-shrink: 0;
-                      "
-                    >
-                      <i
-                        class="bi bi-folder-symlink-fill"
-                        style="font-size: 1.2rem; color: #73a580"
-                        aria-hidden="true"
-                      ></i>
-                    </div>
-                    <div>
-                      <h4
-                        class="text-light mb-2"
-                        style="font-size: 1.2rem; font-weight: 600"
-                      >
-                        VFS (Virtual File System)
-                      </h4>
-                      <p
-                        class="text-light mb-0"
-                        style="
-                          opacity: 0.9;
-                          line-height: 1.6;
-                          font-size: 0.95rem;
-                        "
-                      >
-                        The VFS layer unified access to different file systems
-                        through a common interface. I implemented inodes,
-                        dentries, and file objects — abstractions that allow
-                        uniform file operations regardless of the underlying
-                        storage system. This phase deepened my understanding of
-                        abstraction and modularity in kernel design.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-12">
-              <div
-                class="card h-100"
-                style="
-                  background: rgba(255, 255, 255, 0.06);
-                  border: 1px solid rgba(255, 255, 255, 0.12);
-                  border-radius: 10px;
-                  transition: transform 0.3s, box-shadow 0.3s;
-                "
-                onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)';"
-                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';"
-              >
-                <div class="card-body p-4">
-                  <div class="d-flex align-items-start mb-3">
-                    <div
-                      style="
-                        width: 40px;
-                        height: 40px;
-                        background: rgba(115, 165, 128, 0.2);
-                        border-radius: 8px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        margin-right: 15px;
-                        flex-shrink: 0;
-                      "
-                    >
-                      <i
-                        class="bi bi-folder-fill"
-                        style="font-size: 1.2rem; color: #73a580"
-                        aria-hidden="true"
-                      ></i>
-                    </div>
-                    <div>
-                      <h4
-                        class="text-light mb-2"
-                        style="font-size: 1.2rem; font-weight: 600"
-                      >
-                        S5FS (System V File System)
-                      </h4>
-                      <p
-                        class="text-light mb-0"
-                        style="
-                          opacity: 0.9;
-                          line-height: 1.6;
-                          font-size: 0.95rem;
-                        "
-                      >
-                        Building on the VFS foundation, I implemented a concrete
-                        disk-backed file system modeled after UNIX's System V. I
-                        handled file and directory creation, reading, writing,
-                        and deletion, as well as block allocation and inode
-                        management. Seeing data persist correctly across boots
-                        was one of the most satisfying moments of the project.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-12">
-              <div
-                class="card h-100"
-                style="
-                  background: rgba(255, 255, 255, 0.06);
-                  border: 1px solid rgba(255, 255, 255, 0.12);
-                  border-radius: 10px;
-                  transition: transform 0.3s, box-shadow 0.3s;
-                "
-                onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.3)';"
-                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';"
-              >
-                <div class="card-body p-4">
-                  <div class="d-flex align-items-start mb-3">
-                    <div
-                      style="
-                        width: 40px;
-                        height: 40px;
-                        background: rgba(115, 165, 128, 0.2);
-                        border-radius: 8px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        margin-right: 15px;
-                        flex-shrink: 0;
-                      "
-                    >
-                      <i
-                        class="bi bi-memory"
-                        style="font-size: 1.2rem; color: #73a580"
-                        aria-hidden="true"
-                      ></i>
-                    </div>
-                    <div>
-                      <h4
-                        class="text-light mb-2"
-                        style="font-size: 1.2rem; font-weight: 600"
-                      >
-                        VM (Virtual Memory)
-                      </h4>
-                      <p
-                        class="text-light mb-0"
-                        style="
-                          opacity: 0.9;
-                          line-height: 1.6;
-                          font-size: 0.95rem;
-                        "
-                      >
-                        The final phase focused on virtual memory management. I
-                        implemented user address spaces, paging, and page fault
-                        handling to isolate processes and efficiently map
-                        virtual to physical memory. Completing this stage tied
-                        everything together — for the first time, user programs
-                        could safely execute on a multitasking operating system
-                        that I had developed from the ground up.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <div class="detail-card fade-in">
+    <div class="detail-card__header">
+      <div class="detail-card__icon">
+        <i class="bi bi-hdd-stack-fill" aria-hidden="true"></i>
       </div>
-    </section>
-
-    <!-- Section Divider -->
-    <div class="container section-divider">
-      <hr class="border-light" />
+      <div>
+        <h3 class="detail-card__title">Drivers (Device Drivers)</h3>
+        <p class="detail-card__body">
+          Next, I implemented device drivers for the keyboard,
+          console, and timer hardware. This involved handling
+          interrupts, writing low-level I/O routines, and exposing
+          simple interfaces that higher layers of the kernel could
+          call. Developing drivers made me appreciate the
+          precision and discipline required to safely interact
+          with hardware in a multitasking system.
+        </p>
+      </div>
     </div>
+  </div>
 
-    <!-- Reflection Section -->
-    <section
-      id="reflection"
-      class="d-flex flex-column align-items-center background"
-      style="
-        padding-top: 30px;
-        padding-bottom: 30px;
-        min-height: auto;
-        height: auto;
-      "
-    >
-      <div class="container" style="max-width: 1000px; position: relative">
-        <div class="mt-4">
-          <div
-            class="card"
-            style="
-              background: rgba(255, 255, 255, 0.08);
-              border: 1px solid rgba(255, 255, 255, 0.15);
-              border-radius: 12px;
-              backdrop-filter: blur(10px);
-            "
-          >
-            <div class="card-body p-4">
-              <h2
-                class="text-light mb-3 text-center"
-                style="font-size: 1.5rem; font-weight: 600"
-              >
-                Reflection
-              </h2>
-              <p
-                class="text-light mb-4 text-center"
-                style="font-size: 1.1rem; line-height: 1.8"
-              >
-                Working on Weenix was one of the most challenging and rewarding
-                experiences at Brown. Developing an operating system from the
-                ground up allowed me to gain a deep understanding of what
-                actually happens under the hood — from how a process is created
-                and scheduled, to how memory is managed and files are read from
-                disk.
-                <br />
-                <br />
-                The project taught me the importance of careful memory
-                management, understanding system architecture, and debugging
-                complex concurrent systems. After every crash, segfault, and
-                kernel panic, it was incredibly rewarding to see everything come
-                together and finally be able to print: "Hello, world!"
-              </p>
-              <div
-                class="text-center"
-                style="
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                "
-              >
-                <div
-                  style="
-                    display: inline-block;
-                    padding: 25px;
-                    background: rgba(255, 255, 255, 0.05);
-                    border-radius: 15px;
-                    backdrop-filter: blur(10px);
-                  "
-                >
-                  <img
-                    src="../images/hello-world.png"
-                    alt="Hello World output from Weenix"
-                    title="Hello World - Weenix Output"
-                    loading="lazy"
-                    style="
-                      max-width: 550px;
-                      width: 100%;
-                      height: auto;
-                      object-position: 70% center;
-                    "
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Learn More Button -->
-        <div class="text-center mt-4 mb-4">
-          <a
-            href="https://github.com/brown-cs1690/handout/wiki/Weenix-Operating-System"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-outline-light btn-lg"
-            aria-label="Learn more about Weenix on GitHub"
-          >
-            <i class="bi bi-github me-2"></i> Learn More About Weenix
-          </a>
-        </div>
-
-        <!-- Back to Top Arrow -->
-        <div class="text-center mt-4">
-          <a
-            href="#weenix"
-            class="text-light bounce-arrow scroll-arrow"
-            aria-label="Back to top"
-            >↑</a
-          >
-        </div>
+  <div class="detail-card fade-in">
+    <div class="detail-card__header">
+      <div class="detail-card__icon">
+        <i class="bi bi-folder-symlink-fill" aria-hidden="true"></i>
       </div>
-    </section>
+      <div>
+        <h3 class="detail-card__title">VFS (Virtual File System)</h3>
+        <p class="detail-card__body">
+          The VFS layer unified access to different file systems
+          through a common interface. I implemented inodes,
+          dentries, and file objects — abstractions that allow
+          uniform file operations regardless of the underlying
+          storage system. This phase deepened my understanding of
+          abstraction and modularity in kernel design.
+        </p>
+      </div>
+    </div>
+  </div>
 
-    <!-- Footer -->
-    <footer class="footer-custom text-center text-light py-3">
-      <hr class="border-light mb-3" style="opacity: 0.2" />
-      <p class="mb-0">© 2025 Eric Ko. All rights reserved.</p>
-    </footer>
+  <div class="detail-card fade-in">
+    <div class="detail-card__header">
+      <div class="detail-card__icon">
+        <i class="bi bi-folder-fill" aria-hidden="true"></i>
+      </div>
+      <div>
+        <h3 class="detail-card__title">S5FS (System V File System)</h3>
+        <p class="detail-card__body">
+          Building on the VFS foundation, I implemented a concrete
+          disk-backed file system modeled after UNIX's System V. I
+          handled file and directory creation, reading, writing,
+          and deletion, as well as block allocation and inode
+          management. Seeing data persist correctly across boots
+          was one of the most satisfying moments of the project.
+        </p>
+      </div>
+    </div>
+  </div>
 
-    <!-- Bootstrap JavaScript Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
-</html>
+  <div class="detail-card fade-in">
+    <div class="detail-card__header">
+      <div class="detail-card__icon">
+        <i class="bi bi-memory" aria-hidden="true"></i>
+      </div>
+      <div>
+        <h3 class="detail-card__title">VM (Virtual Memory)</h3>
+        <p class="detail-card__body">
+          The final phase focused on virtual memory management. I
+          implemented user address spaces, paging, and page fault
+          handling to isolate processes and efficiently map
+          virtual to physical memory. Completing this stage tied
+          everything together — for the first time, user programs
+          could safely execute on a multitasking operating system
+          that I had developed from the ground up.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="reflection-card fade-in">
+  <h2>Reflection</h2>
+  <p>
+    Working on Weenix was one of the most challenging and rewarding
+    experiences at Brown. Developing an operating system from the
+    ground up allowed me to gain a deep understanding of what
+    actually happens under the hood — from how a process is created
+    and scheduled, to how memory is managed and files are read from
+    disk.
+  </p>
+  <p>
+    The project taught me the importance of careful memory
+    management, understanding system architecture, and debugging
+    complex concurrent systems. After every crash, segfault, and
+    kernel panic, it was incredibly rewarding to see everything come
+    together and finally be able to print: "Hello, world!"
+  </p>
+  <img
+    src="{{ '/images/hello-world.png' | relative_url }}"
+    alt="Hello World output from Weenix"
+    class="reflection-card__image"
+    loading="lazy"
+  />
+</div>
+
+<div class="detail-cta fade-in">
+  <a
+    href="https://github.com/brown-cs1690/handout/wiki/Weenix-Operating-System"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="btn-outline"
+  >
+    <i class="bi bi-github"></i> Learn More About Weenix
+  </a>
+</div>
