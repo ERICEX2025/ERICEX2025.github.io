@@ -3,6 +3,7 @@ description: AI Engineer & Brown University Graduate
 url: https://ericex2025.github.io
 baseurl: ""
 author: Eric Ko
+image: /images/turtle!.png
 
 plugins:
   - jekyll-seo-tag
