@@ -349,6 +349,13 @@ ul {
   color: #ffffff;
 }
 
+.hero__subtitle {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 1px;
+  margin-bottom: var(--space-xs);
+}
+
 .hero__tagline {
   font-size: var(--font-size-lg);
   color: rgba(255, 255, 255, 0.6);
@@ -371,6 +378,10 @@ ul {
 
 [data-theme="light"] .hero__name {
   color: var(--color-text);
+}
+
+[data-theme="light"] .hero__subtitle {
+  color: var(--color-text-muted);
 }
 
 [data-theme="light"] .hero__tagline {
