@@ -9,11 +9,17 @@ seo:
 <!-- Hero Section -->
 <section id="home" class="hero">
   <div class="container hero__inner">
-    <img
-      src="{{ '/images/eric.jpg' | relative_url }}"
-      alt="Eric Ko"
-      class="hero__photo fade-in"
-    />
+    <picture>
+      <source srcset="{{ '/images/eric.webp' | relative_url }}" type="image/webp" />
+      <img
+        src="{{ '/images/eric-optimized.jpg' | relative_url }}"
+        alt="Eric Ko"
+        class="hero__photo fade-in"
+        width="1200"
+        height="797"
+        fetchpriority="high"
+      />
+    </picture>
     <div class="hero__content">
       <h1 class="hero__name fade-in">Eric Ko</h1>
       <p class="hero__subtitle fade-in">Eric Long Him Ko</p>
