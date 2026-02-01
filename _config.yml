@@ -3,7 +3,7 @@ description: Eric Ko (Eric Long Him Ko) – Product Engineer & Brown University 
 url: https://ericko.dev
 baseurl: ""
 author: Eric Ko
-image: /images/turtle!.png
+image: /images/turtle.png
 
 plugins:
   - jekyll-seo-tag
