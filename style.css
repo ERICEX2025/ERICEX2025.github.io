@@ -650,6 +650,14 @@ ul {
   border-radius: var(--border-radius);
 }
 
+.intro-card__icon {
+  width: 96px;
+  height: 96px;
+  border-radius: 20px;
+  margin: 0 auto var(--space-lg);
+  display: block;
+}
+
 .intro-card__text {
   font-size: var(--font-size-lg);
   color: var(--color-text-muted);
