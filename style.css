@@ -516,6 +516,11 @@ ul {
   color: #818cf8;
 }
 
+.timeline__badge--founder {
+  background: rgba(251, 191, 36, 0.15);
+  color: #fbbf24;
+}
+
 [data-theme="light"] .timeline__badge--work {
   background: rgba(5, 150, 105, 0.1);
   color: #059669;
@@ -534,6 +539,11 @@ ul {
 [data-theme="light"] .timeline__badge--research {
   background: rgba(79, 70, 229, 0.1);
   color: #4f46e5;
+}
+
+[data-theme="light"] .timeline__badge--founder {
+  background: rgba(217, 119, 6, 0.1);
+  color: #d97706;
 }
 
 .timeline__title {
