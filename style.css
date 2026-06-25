@@ -656,6 +656,19 @@ ul {
   border-radius: 20px;
   margin: 0 auto var(--space-lg);
   display: block;
+  object-fit: contain;
+}
+
+.intro-card__icon--chip {
+  background: #ffffff;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.detail-figure--portrait {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .intro-card__text {
