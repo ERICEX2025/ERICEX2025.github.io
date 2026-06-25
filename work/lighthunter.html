@@ -1,7 +1,7 @@
 ---
 title: Lighthunter
 description: Eric Ko's work at Lighthunter, technical cofounder building a pre-production and on-set workspace for cinematographers across web, native iOS/iPadOS, and a Chrome extension.
-image: /images/eric.jpg
+image: /images/lighthunter-hero.png
 layout: detail
 ---
 
@@ -21,11 +21,17 @@ layout: detail
 </header>
 
 <div class="intro-card fade-in">
+  <img
+    src="{{ '/images/lighthunter-hero.png' | relative_url }}"
+    alt="Lighthunter: a preproduction workspace for cinematographers"
+    class="intro-card__image"
+    loading="lazy"
+  />
   <p class="intro-card__text">
-    A pre-production and on-set workspace for cinematographers. I'm the
-    technical cofounder and sole engineer, building the entire product
-    alongside an industry cofounder — from the web app to native iOS and
-    an AI layer.
+    I'm the technical cofounder and sole engineer of Lighthunter, building the
+    whole product alongside an industry cofounder: a web app (Next.js /
+    Supabase), native iPhone and iPad apps (SwiftUI), and a Chrome extension,
+    all sharing one real-time backend and an AI layer.
   </p>
 </div>
 
@@ -102,15 +108,59 @@ layout: detail
   </div>
 </div>
 
+<figure class="detail-figure fade-in">
+  <img
+    src="{{ '/images/lighthunter-extension.png' | relative_url }}"
+    alt="Lighthunter Chrome extension: right-click any image to save it to your reference library"
+    loading="lazy"
+  />
+  <figcaption>
+    The Chrome extension: right-click any image on the web and save it straight
+    to your Lighthunter reference library.
+  </figcaption>
+</figure>
+
+<figure class="detail-figure fade-in">
+  <div class="detail-gallery">
+    <img
+      src="{{ '/images/lighthunter-ref-amber.jpg' | relative_url }}"
+      alt="Cinematic lighting reference: a warm practical lamp in a dark hallway"
+      loading="lazy"
+    />
+    <img
+      src="{{ '/images/lighthunter-ref-window.jpg' | relative_url }}"
+      alt="Cinematic reference: cool daylight on a glass facade"
+      loading="lazy"
+    />
+    <img
+      src="{{ '/images/lighthunter-ref-wet.jpg' | relative_url }}"
+      alt="Cinematic reference: wet pavement reflections at night"
+      loading="lazy"
+    />
+    <img
+      src="{{ '/images/lighthunter-ref-door.jpg' | relative_url }}"
+      alt="Cinematic reference: brass door handle with city reflections"
+      loading="lazy"
+    />
+  </div>
+  <figcaption>
+    Look-based reference search is built around imagery like this, so
+    cinematographers can find shots by the look they want: lighting, mood, and
+    texture.
+  </figcaption>
+</figure>
+
 <div class="reflection-card fade-in">
   <h2>Reflection</h2>
-  <!-- TODO: personalize this reflection in your own voice -->
   <p>
-    Lighthunter is where I get to be the whole engineering team for a real
-    product — web, native, extension, and AI all at once — for users with
-    a craft of their own. Building for cinematographers means the tools
-    have to disappear into their workflow, on set and under pressure, which
-    keeps me obsessing over the details that make software feel effortless.
+    Lighthunter is the project I keep coming back to. It started from a simple
+    idea: cinematographers deserve better tools for planning their work, and I
+    wanted to be the one to build them. I'm the whole engineering team across
+    web, native iOS, a Chrome extension, and an AI layer, so every product and
+    technical decision is mine to make. It's a long-term build alongside an
+    industry cofounder, and it's where I get to push my range as a product
+    engineer: shipping real features for real users, and obsessing over the UX
+    until the tools disappear into their workflow on set.
   </p>
 </div>
 
